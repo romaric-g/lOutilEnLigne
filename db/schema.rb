@@ -10,9 +10,86 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_04_06_101524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "associations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "zipcode"
+    t.string "city"
+    t.float "lat"
+    t.float "long"
+    t.string "phone"
+    t.string "email"
+    t.integer "members"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.date "date"
+    t.integer "slots"
+    t.integer "min_age", limit: 2
+    t.integer "max_age", limit: 2
+    t.string "media"
+    t.time "start_hour"
+    t.time "end_hour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "media"
+    t.text "description"
+    t.time "build_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "metiers", force: :cascade do |t|
+    t.string "name", limit: 150
+    t.string "media", limit: 400
+    t.text "training"
+    t.text "explanation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "zipcode"
+    t.string "city"
+    t.float "lat"
+    t.float "long"
+    t.string "phone"
+    t.string "region"
+    t.text "infos"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.string "media"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

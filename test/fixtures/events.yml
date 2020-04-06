@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  date: 2020-04-06
+  slots: 1
+  min_age: 1
+  max_age: 1
+  media: MyString
+  start_hour: 2020-04-06 12:12:06
+  end_hour: 2020-04-06 12:12:06
+
+two:
+  name: MyString
+  description: MyText
+  date: 2020-04-06
+  slots: 1
+  min_age: 1
+  max_age: 1
+  media: MyString
+  start_hour: 2020-04-06 12:12:06
+  end_hour: 2020-04-06 12:12:06

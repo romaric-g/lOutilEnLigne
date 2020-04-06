@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @association.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @association.address %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @association.zipcode %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @association.city %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @association.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @association.long %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @association.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @association.email %>
+</p>
+
+<p>
+  <strong>Members:</strong>
+  <%= @association.members %>
+</p>
+
+<%= link_to 'Edit', edit_association_path(@association) %> |
+<%= link_to 'Back', associations_path %>
