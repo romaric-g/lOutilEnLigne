@@ -9,15 +9,23 @@ $black: #000;
 .container {
     .title {
         color: $lightblue;
-        font-family: 'Oxygen', sans-serif;
+        font-size: 33px;
+        font-weight: 600;
+        font-family: 'Sarabun', sans-serif;
     }
 
+    section.about {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 
     section.meters {
-        text-align: center;
+        text-align: left;
         .meters-list {
             display: flex;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
             .meter-box {
                 height: 220px;
                 width: 33.3333%;
@@ -29,7 +37,10 @@ $black: #000;
                     width: 100%;
                 }
             }
+        }
 
+        .showall {
+            text-align: center;
         }
     }
 

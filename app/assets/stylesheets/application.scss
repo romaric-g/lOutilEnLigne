@@ -41,8 +41,14 @@ nav {
 
                 a {
                     font-family: 'Oxygen', sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
                     font-size: 1.2em;
                     color: $darkblue;
+
+                    &:hover {
+                        background-color: unset;
+                    }
                 }
 
                 &.high {
@@ -60,16 +66,34 @@ nav {
 
 p {
     font-family: 'Dosis', sans-serif;
-    font-size: 17px;
-    line-height: 22px;
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: justify;
 }
 .btn {
     background-color: $darkblue;
     color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0;
     font-family: 'Dosis', sans-serif;
-    padding: 6px 25px;
-    font-size: 0.9em;
+    padding: 12px 30px;
+    margin-top: 1.5rem;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+        color: white;
+        background-color: $darkblue;
+    }
+
+
+    svg {
+        height: 28px;
+        padding-right: 5px;
+    }
 }
 
 section {
