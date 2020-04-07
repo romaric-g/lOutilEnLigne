@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <p>L'outil en ligne</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Métiers</a></li>
+            <li><a href="#">Bénévoles</a></li>
+            <li><a href="#">Réalisations</a></li>
+            <li class="high"><a href="#">Associations</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

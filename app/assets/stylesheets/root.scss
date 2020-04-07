@@ -1,0 +1,14 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$darkblue: #002F5A;
+$lightblue: #0271B1;
+$black: #000;
+
+.container {
+    .title {
+        color: $lightblue;
+        font-family: 'Oxygen', sans-serif;
+    }
+}

@@ -16,3 +16,45 @@
  
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+$darkblue: #002F5A;
+$lightblue: #0271B1;
+$black: #000;
+
+nav {
+    padding: 25px 0;
+    font-family: 'Oxygen', sans-serif;
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+
+    .links {
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            li {
+                margin: 0 20px;
+
+                a {
+                    font-family: 'Oxygen', sans-serif;
+                    font-size: 1.2em;
+                    color: $darkblue;
+                }
+
+                &.high {
+                    a {
+                        background-color: $darkblue;
+                        padding: 4px 30px;
+                        border-radius: 15px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
