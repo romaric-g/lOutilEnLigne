@@ -12,8 +12,25 @@ $black: #000;
         font-family: 'Oxygen', sans-serif;
     }
 
-    .meter-box {
-        background-color: black;
-        height: 250px;
+
+    section.meters {
+        text-align: center;
+        .meters-list {
+            display: flex;
+            margin-bottom: 1.5rem;
+            .meter-box {
+                height: 220px;
+                width: 33.3333%;
+                padding-right: 8px;
+                overflow: hidden;
+                img {
+                    background-color: black;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+        }
     }
+
 }
