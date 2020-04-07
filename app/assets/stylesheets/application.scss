@@ -29,7 +29,6 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    
     }
 
     .links {
@@ -57,4 +56,17 @@ nav {
             }
         }
     }
+}
+
+.btn {
+    background-color: $darkblue;
+    color: $white;
+    border-radius: 0;
+    font-family: 'Dosis', sans-serif;
+    padding: 6px 25px;
+    font-size: 0.9em;
+}
+
+section {
+    margin-bottom: 80px;
 }
