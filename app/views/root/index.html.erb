@@ -1,6 +1,6 @@
 <div class="container">
     <section class="about row align-items-center">
-        <div class="text col-md-6">
+        <div class="text col-md-6 pr-4">
             <h2 class="title">Echanger et Transmettre</h2>
             <p>L’initiation des enfants aux métiers manuels et du patrimoine</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
@@ -10,21 +10,21 @@
 Trouver une association</a>
         </div>
         <div class="image col-md-6">
-            <img src="https://www.loutilenmain.fr/main/pages/medias-presse/RootAlbums/Foire%20de%20Rennes%202019/20190329011.jpg" alt="" srcset="">
+            <img src="https://www.loutilenmain.fr/main/pages/medias-presse/RootAlbums/Foire%20de%20Rennes%202019/20190329011.jpg" class="img-full" alt="" srcset="">
         </div>
     </section>
     <section class="meters row">
         <div class="col-12">
             <h2 class="title">Découvrez nos différents métiers</h2>
-            <div class="meters-list">
-                <div class="meter-box">
-                <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" alt="" srcset="">
+            <div class="row" style="max-height: 240px; overflow: hidden;">
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" class="img-full" alt="" srcset="">
                 </div>
-                <div class="meter-box">
-                    <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" alt="" srcset="">
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" class="img-full" alt="" srcset="">
                 </div>
-                <div class="meter-box">
-                    <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" alt="" srcset="">
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" class="img-full" alt="" srcset="">
                 </div>
             </div>
             <div class="showall"><a href="#" class="btn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,9 +34,9 @@ Tous les métiers</a></div>
         </div>
     </section>
     <section class="benevoles">
-        <h2 class="title">Accompagné par des bénévoles passionnés</h2>
-        <div class="row">
-            <div class="col-md-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 pr-4">
+                <h2 class="title">Accompagné par des bénévoles passionnés</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
 
                 <a href="#" class="btn">
@@ -48,8 +48,47 @@ Tous les métiers</a></div>
                     Devenir bénévole
                 </a>            
             </div>
-            <div class="col-md-7">
-                
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4"><img src="https://vz.cnwimg.com/thumb-1200x/wp-content/uploads/2018/06/bb.jpg" class="img-full" alt=""></div>
+                    <div class="col-md-4"><img src="https://www.stenphoto.fr/wp-content/uploads/2019/05/StenBySB.jpg" class="img-full" alt=""></div>
+                    <div class="col-md-4"><img src="https://vz.cnwimg.com/thumb-1200x/wp-content/uploads/2018/06/bb.jpg" class="img-full" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tools">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "img-full"%>
+            </div>
+            <div class="col-md-6  pl-4">
+                <h2 class="title">Apprenez à manier des outils de professionel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
+                <a href="#" class="btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.6999 18.9998L13.5999 9.89977C14.4999 7.59977 13.9999 4.89977 12.0999 2.99977C10.0999 0.999768 7.09994 0.599768 4.69994 1.69977L8.99994 5.99977L5.99994 8.99977L1.59994 4.69977C0.399939 7.09977 0.899939 10.0998 2.89994 12.0998C4.79994 13.9998 7.49994 14.4998 9.79994 13.5998L18.8999 22.6998C19.2999 23.0998 19.8999 23.0998 20.2999 22.6998L22.5999 20.3998C23.0999 19.9998 23.0999 19.2998 22.6999 18.9998Z" fill="white"/></svg>
+                    Liste des outils
+                </a>
+            </div> 
+        </div>
+    </section>
+    <section class="creations">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="title">Réalisez des créations épatantes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="row">
+                    <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
+                    <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
+                    <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
+                    <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
+                </div>
+                <a href="#" class="btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 11.9999V19.9999H18V11.9999H10ZM0 19.9999H8V11.9999H0V19.9999ZM0 1.99994V9.99994H8V1.99994H0ZM13.66 0.689941L8 6.33994L13.66 11.9999L19.32 6.33994L13.66 0.689941V0.689941Z" fill="white"/></svg>
+                    Liste des réalisations
+                </a>
             </div>
         </div>
     </section>

@@ -9,33 +9,19 @@ $black: #000;
 .container {
     .title {
         color: $lightblue;
-        font-size: 33px;
+        font-size: 37px;
         font-weight: 600;
         font-family: 'Sarabun', sans-serif;
+        margin-bottom: 1.5rem;
     }
-
-    section.about {
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
+    section {
+        margin-bottom: 8rem;
     }
-
     section.meters {
         text-align: left;
         .meters-list {
-            display: flex;
-            margin: 1rem 0;
             .meter-box {
                 height: 220px;
-                width: 33.3333%;
-                padding-right: 8px;
-                overflow: hidden;
-                img {
-                    background-color: black;
-                    object-fit: cover;
-                    width: 100%;
-                }
             }
         }
 
@@ -43,5 +29,4 @@ $black: #000;
             text-align: center;
         }
     }
-
 }
