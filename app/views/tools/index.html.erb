@@ -4,11 +4,13 @@
 
 <div class="row">
   <% @tools.each do |tool| %>
-    <div class="col-md-4">      
-      <div class="card mb-4 shadow-sm">
-        <text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= tool.name %></text>
-        <img alt=""class="bd-placeholder-img card-img-top" src="<%= tool.media %>">   
+    <%= link_to tool, class: "col-md-4" do %>
+      <div>      
+        <div class="card mb-4 shadow-sm">
+          <text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= tool.name %></text>
+          <img alt=""class="bd-placeholder-img card-img-top" src="<%= tool.media %>">   
+        </div>
       </div>
-    </div>
+     <% end %> 
   <% end %> 
 </div>
