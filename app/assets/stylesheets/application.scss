@@ -43,7 +43,7 @@ $black: #000;
 }
 
 nav {
-    font-family: 'Oxygen', sans-serif;
+    font-family: Dosis, sans-serif;
     .logo {
         height: 100%;
         display: flex;
@@ -125,7 +125,7 @@ body p {
         padding-right: 5px;
     }
 }
-h2 {
+h2, .h2 {
     color: $lightblue;
     font-size: 37px;
     font-weight: 600;
@@ -139,4 +139,9 @@ section {
 footer {
     background-color: $darkblue;
     height: 120px;
+}
+
+.custom-select {
+    border: 1px $darkblue solid;
+    border-radius: 0;
 }

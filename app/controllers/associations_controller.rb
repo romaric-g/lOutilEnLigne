@@ -6,6 +6,7 @@ class AssociationsController < ApplicationController
   # GET /associations.json
   def index
     @associations = Association.all
+    @regions = Region.all
   end
 
   # GET /associations/1
@@ -70,6 +71,6 @@ class AssociationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def association_params
-      params.require(:association).permit(:name, :address, :zipcode, :city, :lat, :long, :phone, :email, :members)
+      params.require(:association).permit(:name, :address, :zipcode, :city, :lat, :long, :phone, :email, :region,:members)
     end
 end
