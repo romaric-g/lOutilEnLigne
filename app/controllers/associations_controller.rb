@@ -5,7 +5,7 @@ class AssociationsController < ApplicationController
   # GET /associations
   # GET /associations.json
   def index
-    @associations = Association.all
+    @associations = Asso.all
     @regions = Region.all
   end
 
@@ -16,7 +16,7 @@ class AssociationsController < ApplicationController
 
   # GET /associations/new
   def new
-    @association = Association.new
+    @association = Asso.new
   end
 
   # GET /associations/1/edit
@@ -26,7 +26,7 @@ class AssociationsController < ApplicationController
   # POST /associations
   # POST /associations.json
   def create
-    @association = Association.new(association_params)
+    @association = Asso.new(association_params)
 
     respond_to do |format|
       if @association.save
@@ -66,7 +66,7 @@ class AssociationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_association
-      @association = Association.find(params[:id])
+      @association = Asso.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
