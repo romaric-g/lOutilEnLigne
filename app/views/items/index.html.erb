@@ -8,11 +8,15 @@
 
 <div class="row" style="margin-bottom: 3em;">
   <% @items.each do |item| %>
-    <div class="col-md-6 item_card">
-      <img alt="" class="img-full" src="<%= item.media %>">
-      <div class="rect">
-        <h2 class="object_name"><%= item.name %></h2>
+    <div class="col-md-6 mt-4">
+      <%= link_to item do %>        
+        <div class="rect-card">
+          <img alt="" class="img-full" src="<%= item.media %>">
+          <div class="rect">
+            <h2 class="rect-title"><%= item.name %></h2>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
