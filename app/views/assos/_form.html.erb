@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@association) do |f| %>
+<%= simple_form_for(@asso) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -12,8 +12,8 @@
     <%= f.input :long %>
     <%= f.input :phone %>
     <%= f.input :email %>
-    <%= f.input :region %>
     <%= f.input :members %>
+    <%= f.association :region %>
   </div>
 
   <div class="form-actions">

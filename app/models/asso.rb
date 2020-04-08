@@ -1,4 +1,4 @@
 class Asso < ApplicationRecord
-	has_one :user
+	belongs_to :region
 	has_many :events
 end

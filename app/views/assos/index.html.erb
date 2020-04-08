@@ -10,12 +10,12 @@
       </select>
   </div>
   <div class="col-md-12 mt-4 mb-4">
-    <% @associations.each do |association| %>
-      <%= link_to association do %>    
+    <% @assos.each do |asso| %>
+      <%= link_to asso do %>    
         <div class="card">
           <div class="card-body">
-            <p class="h3 card-title"><%= association.name %></p>
-            <p class="card-subtitle text-muted"><%= association.region %></p>
+            <p class="h3 card-title"><%= asso.name %></p>
+            <p class="card-subtitle text-muted"><%= asso.region.displayname %></p>
           </div>
         </div>
       <% end %>
