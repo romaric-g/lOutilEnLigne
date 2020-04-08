@@ -37,6 +37,13 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <%= 
+        if( params["controller"] != "root" )
+          render_breadcrumbs :separator => ' / '
+        end
+      %>
+    </div>
     <%= yield %>
     <footer>
       <div class="container">

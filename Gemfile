@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 
 gem 'devise'
+gem "breadcrumbs_on_rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
