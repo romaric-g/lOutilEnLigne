@@ -11,6 +11,7 @@ class ToolsController < ApplicationController
   # GET /tools/1
   # GET /tools/1.json
   def show
+    add_breadcrumb "#{@tool.name}", :tool_path
   end
 
   # GET /tools/new
