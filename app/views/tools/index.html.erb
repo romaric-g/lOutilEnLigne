@@ -1,31 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tools</h1>
+<h1>Notre boite à outils</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Media</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @tools.each do |tool| %>
       <tr>
-        <td><%= tool.name %></td>
-        <td><%= tool.media %></td>
-        <td><%= tool.description %></td>
-        <td><%= link_to 'Show', tool %></td>
-        <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
-        <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <a href="#">
+          <td><%= tool.name %></td>
+          <td><%= tool.media %></td>
+        </a>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Tool', new_tool_path %>
+<div class="row">
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+  <div class="col-md-4">      
+    <div class="card mb-4 shadow-sm">
+      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
+      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+    </div>
+  </div>
+</div>
