@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @atelier.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @atelier.description %>
+</p>
+
+<p>
+  <strong>Slots:</strong>
+  <%= @atelier.slots %>
+</p>
+
+<p>
+  <strong>Min age:</strong>
+  <%= @atelier.min_age %>
+</p>
+
+<p>
+  <strong>Max age:</strong>
+  <%= @atelier.max_age %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @atelier.media %>
+</p>
+
+<%= link_to 'Edit', edit_atelier_path(@atelier) %> |
+<%= link_to 'Back', ateliers_path %>
