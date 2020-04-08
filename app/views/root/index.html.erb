@@ -1,13 +1,13 @@
 
     <section class="about row align-items-center">
         <div class="text col-md-6 pr-4">
-            <h2 class="title">Echanger et Transmettre</h2>
+            <h2>Echanger et Transmettre</h2>
             <p>L’initiation des enfants aux métiers manuels et du patrimoine</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
-            <a href="find" class="btn"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20.6667 18.6667H19.6133L19.24 18.3067C20.5467 16.7867 21.3333 14.8133 21.3333 12.6667C21.3333 7.88 17.4533 4 12.6667 4C7.88 4 4 7.88 4 12.6667C4 17.4533 7.88 21.3333 12.6667 21.3333C14.8133 21.3333 16.7867 20.5467 18.3067 19.24L18.6667 19.6133V20.6667L25.3333 27.32L27.32 25.3333L20.6667 18.6667ZM12.6667 18.6667C9.34667 18.6667 6.66667 15.9867 6.66667 12.6667C6.66667 9.34667 9.34667 6.66667 12.6667 6.66667C15.9867 6.66667 18.6667 9.34667 18.6667 12.6667C18.6667 15.9867 15.9867 18.6667 12.6667 18.6667Z" fill="white"/>
-</svg>
-Trouver une association</a>
+            <%= link_to associations_path, class:"btn" do %>
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.6667 18.6667H19.6133L19.24 18.3067C20.5467 16.7867 21.3333 14.8133 21.3333 12.6667C21.3333 7.88 17.4533 4 12.6667 4C7.88 4 4 7.88 4 12.6667C4 17.4533 7.88 21.3333 12.6667 21.3333C14.8133 21.3333 16.7867 20.5467 18.3067 19.24L18.6667 19.6133V20.6667L25.3333 27.32L27.32 25.3333L20.6667 18.6667ZM12.6667 18.6667C9.34667 18.6667 6.66667 15.9867 6.66667 12.6667C6.66667 9.34667 9.34667 6.66667 12.6667 6.66667C15.9867 6.66667 18.6667 9.34667 18.6667 12.6667C18.6667 15.9867 15.9867 18.6667 12.6667 18.6667Z" fill="white"/></svg>
+                Trouver une association</a>
+            <% end %>
         </div>
         <div class="image col-md-6">
             <img src="https://www.loutilenmain.fr/main/pages/medias-presse/RootAlbums/Foire%20de%20Rennes%202019/20190329011.jpg" class="img-full" alt="" srcset="">
@@ -15,7 +15,7 @@ Trouver une association</a>
     </section>
     <section class="meters row">
         <div class="col-12">
-            <h2 class="title">Découvrez nos différents métiers</h2>
+            <h2>Découvrez nos différents métiers</h2>
             <div class="row" style="max-height: 240px; overflow: hidden;">
                 <div class="col-md-4">
                     <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" class="img-full" alt="" srcset="">
@@ -27,26 +27,28 @@ Trouver une association</a>
                     <img src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_1280.jpg" class="img-full" alt="" srcset="">
                 </div>
             </div>
-            <div class="showall"><a href="#" class="btn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.00007 21H13.0001V23H1.00007V21ZM5.24507 8.07L8.07507 5.243L22.2151 19.385L19.3871 22.213L5.24507 8.07ZM12.3171 1L17.9741 6.656L15.1441 9.486L9.49007 3.826L12.3171 1ZM3.82507 9.485L9.48207 15.142L6.65407 17.97L0.99707 12.313L3.82507 9.485Z" fill="white"/>
-</svg>
-Tous les métiers</a></div>
+            <div class="showall">
+                <%= link_to metiers_path, class:"btn" do %>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.00007 21H13.0001V23H1.00007V21ZM5.24507 8.07L8.07507 5.243L22.2151 19.385L19.3871 22.213L5.24507 8.07ZM12.3171 1L17.9741 6.656L15.1441 9.486L9.49007 3.826L12.3171 1ZM3.82507 9.485L9.48207 15.142L6.65407 17.97L0.99707 12.313L3.82507 9.485Z" fill="white"/></svg>
+                    Tous les métiers
+                <% end %>
+            </div>
         </div>
     </section>
     <section class="benevoles">
         <div class="row align-items-center">
             <div class="col-md-6 pr-4">
-                <h2 class="title">Accompagné par des bénévoles passionnés</h2>
+                <h2>Accompagné par des bénévoles passionnés</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
 
-                <a href="#" class="btn">
+                <%= link_to users_path, class:"btn" do %>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="white"/></svg>
                     Découvrez nos bénévoles
-                </a>
-                <a href="#" class="btn">
+                <% end %>
+                <%= link_to users_path, class:"btn" do %>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 19H11V17H13V19ZM15.07 11.25L14.17 12.17C13.45 12.9 13 13.5 13 15H11V14.5C11 13.4 11.45 12.4 12.17 11.67L13.41 10.41C13.78 10.05 14 9.55 14 9C14 7.9 13.1 7 12 7C10.9 7 10 7.9 10 9H8C8 6.79 9.79 5 12 5C14.21 5 16 6.79 16 9C16 9.88 15.64 10.68 15.07 11.25Z" fill="white"/></svg>
                     Devenir bénévole
-                </a>            
+                <% end %>         
             </div>
             <div class="col-md-6">
                 <div class="row">
@@ -63,19 +65,19 @@ Tous les métiers</a></div>
                 <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "img-full"%>
             </div>
             <div class="col-md-6  pl-4">
-                <h2 class="title">Apprenez à manier des outils de professionel</h2>
+                <h2>Apprenez à manier des outils de professionel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
-                <a href="#" class="btn">
+                <%= link_to tools_path, class:"btn" do %>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.6999 18.9998L13.5999 9.89977C14.4999 7.59977 13.9999 4.89977 12.0999 2.99977C10.0999 0.999768 7.09994 0.599768 4.69994 1.69977L8.99994 5.99977L5.99994 8.99977L1.59994 4.69977C0.399939 7.09977 0.899939 10.0998 2.89994 12.0998C4.79994 13.9998 7.49994 14.4998 9.79994 13.5998L18.8999 22.6998C19.2999 23.0998 19.8999 23.0998 20.2999 22.6998L22.5999 20.3998C23.0999 19.9998 23.0999 19.2998 22.6999 18.9998Z" fill="white"/></svg>
                     Liste des outils
-                </a>
+                <% end %>
             </div> 
         </div>
     </section>
     <section class="creations">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="title">Réalisez des créations épatantes</h2>
+                <h2>Réalisez des créations épatantes</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere metus et nisi rutrum ultricies. Maecenas molestie lectus elit, ac sagittis risus elementum ut. Quisque tristique ultricies velit, sit amet volutpat quam ultrices vel. Vestibulum eu sem vehicula, rhoncus ex a, scelerisque arcu. Vestibulum vel leo nisi. Integer pulvinar sapien cursus tortor scelerisque, eu tincidunt felis porta.</p>
             </div>
             <div class="col-md-12 text-center">
@@ -85,10 +87,10 @@ Tous les métiers</a></div>
                     <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
                     <div class="col-md-3"><img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full" alt=""></div>
                 </div>
-                <a href="#" class="btn">
+                <%= link_to items_path, class:"btn" do %>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 11.9999V19.9999H18V11.9999H10ZM0 19.9999H8V11.9999H0V19.9999ZM0 1.99994V9.99994H8V1.99994H0ZM13.66 0.689941L8 6.33994L13.66 11.9999L19.32 6.33994L13.66 0.689941V0.689941Z" fill="white"/></svg>
                     Liste des réalisations
-                </a>
+                <% end %>
             </div>
         </div>
     </section>

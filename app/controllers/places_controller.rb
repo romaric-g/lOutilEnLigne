@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Lieux", :places_path
 
   # GET /places
   # GET /places.json

@@ -1,5 +1,6 @@
 class ToolsController < ApplicationController
   before_action :set_tool, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Outils", :tools_path
 
   # GET /tools
   # GET /tools.json

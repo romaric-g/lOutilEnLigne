@@ -1,6 +1,6 @@
 class AssociationsController < ApplicationController
   before_action :set_association, only: [:show, :edit, :update, :destroy]
-  add_breadcrumb "associations", :associations_path
+  add_breadcrumb "Associations", :associations_path
 
   # GET /associations
   # GET /associations.json

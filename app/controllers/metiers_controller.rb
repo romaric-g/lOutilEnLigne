@@ -1,5 +1,6 @@
 class MetiersController < ApplicationController
   before_action :set_metier, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Metiers", :metiers_path
 
   # GET /metiers
   # GET /metiers.json

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Bénévoles", :users_path
 
   # GET /users
   # GET /users.json

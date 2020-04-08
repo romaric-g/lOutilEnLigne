@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Evenements", :events_path
 
   # GET /events
   # GET /events.json
