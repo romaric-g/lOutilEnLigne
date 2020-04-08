@@ -1,19 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @tool.name %>
-</p>
-
-<p>
-  <strong>Media:</strong>
-  <%= @tool.media %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @tool.description %>
-</p>
-
-<%= link_to 'Edit', edit_tool_path(@tool) %> |
-<%= link_to 'Back', tools_path %>
+<h1><%= @tool.name %></h1>
+<div class="row align-items-center">
+  <div class="col-sm">
+    <img class="img-full" src="https://cdn.manomano.com/affuteuse-a-eau-tiger-2500-scheppach-230v-50hz-5903202901-P-2528706-6451438_1.jpg">
+  </div>
+  <div class="col-sm">
+    <h3>Description</h3>
+    <p><%= @tool.description %></p>
+  </div>
+</div>
+<h3>Métier associé</h3>
+<p></p>
