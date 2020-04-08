@@ -2,54 +2,13 @@
 
 <h1>Notre boite à outils</h1>
 
-<table>
-  <tbody>
-    <% @tools.each do |tool| %>
-      <tr>
-        <a href="#">
-          <td><%= tool.name %></td>
-          <td><%= tool.media %></td>
-        </a>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <div class="row">
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
+  <% @tools.each do |tool| %>
+    <div class="col-md-4">      
+      <div class="card mb-4 shadow-sm">
+        <text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= tool.name %></text>
+        <img alt=""class="bd-placeholder-img card-img-top" src="<%= tool.media %>">   
+      </div>
     </div>
-  </div>
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
-    </div>
-  </div>
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
-    </div>
-  </div>
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
-    </div>
-  </div>
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
-    </div>
-  </div>
-  <div class="col-md-4">      
-    <div class="card mb-4 shadow-sm">
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Name</text>
-      <%= image_tag "adult-1866533_1920.jpg", alt: "", class: "bd-placeholder-img card-img-top" %>   
-    </div>
-  </div>
+  <% end %> 
 </div>
