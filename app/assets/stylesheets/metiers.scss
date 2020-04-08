@@ -1,3 +1,32 @@
 // Place all the styles related to the Metiers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.h2{
+	color: #006FB1;
+	font-family: 'Sarabun', sans-serif;
+	font-weight: 700;
+}
+
+.img-metier{
+	width: 50%;
+	height: 300px;
+	float: right;
+	margin: 0 0 15px 25px;
+}
+
+.img-full {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-benevole {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-tool{
+	border-radius: 10em;
+}
