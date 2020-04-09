@@ -138,10 +138,11 @@ ActiveRecord::Schema.define(version: 2020_04_09_192531) do
     t.float "lat"
     t.float "long"
     t.string "phone"
-    t.string "region"
     t.text "infos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_places_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -180,5 +181,6 @@ ActiveRecord::Schema.define(version: 2020_04_09_192531) do
   add_foreign_key "departements", "regions"
   add_foreign_key "events", "assos"
   add_foreign_key "events", "places"
+  add_foreign_key "places", "regions"
   add_foreign_key "users", "metiers"
 end
