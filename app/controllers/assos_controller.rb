@@ -73,6 +73,6 @@ class AssosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def asso_params
-      params.require(:asso).permit(:name, :address, :zipcode, :city, :lat, :long, :phone, :email, :members, :region_id)
+      params.require(:asso).permit(:name, :address, :zipcode, :city, :lat, :long, :phone, :email, :members, :departement_id)
     end
 end
