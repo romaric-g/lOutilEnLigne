@@ -3,7 +3,7 @@
 
 <div class="col-md-12 text-center mt-5">
   <h2 class="h2">Retrouvez les ateliers !</h2>
-  <h3 class="h3">Tous les mercredis de 14H à 18H</h3>
+  <p>Tous les mercredis de 14H à 18H</p>
   
   <div class="row">
     <% @asso.ateliers.each do |atelier| %>
@@ -24,7 +24,7 @@
 
 <div class="text-center mt-5 col-md-12">
   <h2 class="h2">Découvrez nos réalisations !</h2>
-  <h3 class="h3">Tout est fait avec passion</h3>
+  <p>Tout est fait avec passion</p>
   <div class="row mt-4 mb-4">
     <div class="col-md-4 mb-2" style="max-height: 15vw;">
       <img src="https://www.loutilenmain.fr/ged/bibliobjets/366.png" class="img-full">
@@ -36,7 +36,7 @@
       <img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full">
     </div>
   </div>
-  <%= link_to 'Liste des réalisations', items, class:"btn"%>
+  <%= link_to 'Liste des réalisations', items_path, class:"btn"%>
 </div>
 
 <div class="col-md-12 mt-5">

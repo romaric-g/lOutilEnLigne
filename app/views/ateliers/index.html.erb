@@ -1,21 +1,20 @@
 <h1>Ateliers</h1>
-<h2><%= @asso.name %></h2>
-
-<h1 class="h1"><%= @asso.city %></h1>
-<h2 class="h2"><%= @asso.departement %></h2>
+<h2><%= @asso.city %> - <%= @asso.departement %></h2>
 
 <div class="col-md-12 text-center mt-5">
   <h2 class="h2">Les ateliers</h2>
-  <h3 class="h3">Découvrez ce que vous pourrez faire dans notre association !</h3>
+  <hp>Découvrez ce que vous pourrez faire dans notre association !</p>
   
   <div class="row">
     <% @ateliers.each do |atelier| %>
-      <div class="col-md-4 p-2" style="height: 25vw;">
-        <img src="<%= atelier.media %>" class="img-full">
-        <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-          <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080"><%= atelier.name %></p>
+      <%= link_to asso_atelier_path(@asso,atelier), class: "col-md-4 p-2", :style=> 'height:25vw;' do %>
+        <div class="h-100">
+          <img src="<%= atelier.media %>" class="img-full">
+          <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
+            <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080"><%= atelier.name %></p>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>      
   </div>
 </div>

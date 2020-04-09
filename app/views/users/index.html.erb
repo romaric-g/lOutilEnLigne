@@ -1,17 +1,14 @@
-<h1 class="h1">Bordeaux Métropole</h1>
-<h2 class="h2">Gironde</h2>
-
 <div class="col-md-10 offset-md-1">
   <div class="row col-md-12 m-3">
     <h2 class="h2 col-md-12">Nos bénévoles</h2>
-    <h3 class="h3 col-md-12">Rencontrez-les lors de nos ateliers !</h3>
+    <hp class="col-md-12">Rencontrez-les lors de nos ateliers !</p>
   </div>
 
   <div class="row justify-content-md-between ">
     <% @users.each do |user| %>
       <div class="col col-lg-4 m-5">
         <img src="<%= user.media %>" class="img-benevole">
-        <h3 class="h3"><%= user.last_name %> <%= user.first_name %></h4>
+        <p><%= user.last_name %> <%= user.first_name %></p>
         <p class="h5">L'Outil en main</p>
         <p class="h5"><%= user.asso %></p>
       </div>
