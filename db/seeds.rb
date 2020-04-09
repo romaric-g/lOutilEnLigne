@@ -5,9 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
 
+##############
 
-#Places
+# Ordre :
+
+# Items
+# Metiers
+# Places
+# Tools
+# Users
+# Assos
+# Events
+# Atelier
+
+##############
+
+# Items ##############################
+
+  #  t.string "name"
+  #  t.string "media"
+  #  t.text "description"
+  #  t.time "build_time"
+
+items_list = [
+	[]
+]
+
+# Metiers ############################
+    
+ # t.string "name", limit: 150
+ # t.string "media", limit: 400
+ # t.text "training"
+ # t.text "explanation"
+
+metiers_list = [
+	["Relieur", nil, "CAP arts de la reliure, BMA art de la reliure et de la dorure, DN des métiers d’art et du design mention livre", "Le relieur, aussi parfois doreur, a comme rôle de protéger des livres en leur fabriquant des couvertures, traditionnellement pour les manuscrits mais également pour des imprimés. Sur la plupart des livres, un relieur va assembler les pages en « cahiers » et les coudre ensembles, puis fabriquer la couverture et l’assembler au livre. Mais il peut aussi travailler dans la restauration de livres anciens. Il doit d’abord démonter et nettoyer le livre, pour s’assurer qu’il est dans le meilleur état possible, puis il refait la reliure et restaure la couverture. Il travaille généralement avec des fils de lin ou de la colle, et du cuir ou d’autres matériaux similaires pour la couverture. Il est souvent appelé par des bibliothèques ou des musées. C’est un métier qui demande de la précaution et de la patience, ainsi que de la créativité, et surtout un grand amour des livres."]
+]
+
+# Places ############################
 
 places_list = [
 	["Atelier de création","1 avenue Léon Harmel","92160","Antony", nil, nil, "06 01 02 03 04", "Ile-de-France", "Ouvert de 10h à 18h"]
@@ -17,7 +54,22 @@ places_list.each do |name, address, zipcode, city, lat, long, phone, region, inf
   Places.create( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, region: region, infos: infos )
 end
 
-#Associations
+# Tools ############################
+
+    # t.string "name"
+    # t.string "media"
+    # t.text "description"
+
+tools_list = [
+	["Presse", nil, "La presse est un outil utilisé par le relieur pour compresser les pages d’un livre."],
+	["Ciseaux", nil, "Les ciseaux, composés d’une lame en métal et d’un manche généralement en plastique permettent de couper des feuilles de papier."],
+	["Massicot", nil, "Le massicot permet de couper de nombreuses feuilles de papier en une seule fois. En effet, il faut placer toutes ces feuilles sur la partie horizontale et utiliser la lame."],
+]    
+
+# Users ############################
+
+
+# Assos ############################
 
 associations_list = [
 	["L'Outil en Main d'ANTONY", "1 avenue Léon Harmel", "92160", "ANTONY", nil, nil, "06 33 08 98 77", "oemantony@gmail.com", 32, "Ile-de-France"],
@@ -30,25 +82,10 @@ associations_list = [
 
 ]
 
-associations_list.each do |name, address, zipcode, city, lat, long, phone, email, members, region|
-  Associations.create( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, email: email, members: members, region: region, )
+assos_list.each do |name, address, zipcode, city, lat, long, phone, email, members, region|
+  Assos.create( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, email: email, members: members, region: region, )
 end
 
-#Users
+# Events ############################
 
-#Tools
-
-#Metiers
-    t.string "name", limit: 150
-    t.string "media", limit: 400
-    t.text "training"
-    t.text "explanation"
-
-metiers_list = [
-	["Relieur", nil, "CAP arts de la reliure, BMA art de la reliure et de la dorure, DN des métiers d’art et du design mention livre"]
-
-]
-
-
-#Items
-#Events
+# Ateliers ############################
