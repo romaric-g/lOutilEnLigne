@@ -36,8 +36,20 @@ items_list = [
 	["Gîte pour chauves-souris", nil, "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
 	["Gîte pour chauves-souris", nil, "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
 	["Jardinière", nil, "Cette jardinière est faire en béton coffré et est recouverte de faïence cassée.", nil],
+	["Violon et archet", nil, "Réalisation d’un violon et de son archet avec la technique de la dentelle aux fuseaux.", nil],
+	["Marque-page de Paul", nil, "Création d’un marque-page bicolore en dentelle au fuseau", nil],
+	["Bracelet de Marie", nil, "Création d’un bracelet en dentelle au fuseau avec attaches métalliques", nil],
+	["Bougeoir de Breteil", nil, "Ce bougeoir est réalisé avec 3 éléments forgé et une tôle mise en forme de cône.", nil],
+	["L’avion de Jean-Yves", nil, "Cet avion est réalisé en tôle formée et soudée. Les ailes et l’hélice sont en aluminium alors que le moteur, les roues, les écarteurs d’ailes et le pilote sont en bois.", nil],
+	["Masques d’Halloween", nil, "Ces avion sont fabriqués en tôle pliée et découpée. Elle a été rivetée sur un couvercle de pot de confiture. Derrière chaque masque, une bougie a été placée.", nil],
 
 ]
+
+items_list.each do |name, media, description, build_time|
+  Item.create(name: name, media: media, description: description, build_time: build_time)
+end
+
+puts "Items OK!"
 
 # Metiers ############################
     
@@ -51,7 +63,16 @@ metiers_list = [
 	["Plâtrier", nil, "CAP plâtrier-plaquiste ou CAP staffeur ornemaniste, BAC pro aménagement-finition puis BTS finition-aménagement", "Le plâtrier intervient dans le bâtiment après la maçonnerie et la menuiserie. Il a plusieurs rôles : enduire les murs et les plafonds de couches de plâtre, pour rendre les surfaces régulières ; construire les cloisons avec des matériaux tout prêts (plaques ou carreaux de plâtre) ; faire l’isolation des bâtiments ; et enfin décorer en faisant des moulures, des corniches, des rosaces… Le plâtrier doit être minutieux et précis, et avoir un sens de la méthode."],
 	["Meunuisier", nil, "CAP menuisier, charpentier ou constructeur bois, Bac pro technicien menuisier, charpentier ou constructeur bois, BTS systèmes constructifs bois et habitat ou développement et réalisation bois", "Le menuisier travaille le bois sous toutes ses formes : fabrication, réparation, installation… pour créer des placards, des parquets, des escaliers, des tables, n’importe quel ouvrage de boiserie. Il peut également utiliser du PVC ou de l’aluminium, et des produits de revêtement (laque, vernis…) pour finaliser son travail. Il commence par choisir le matériau adapté puis y découpe les formes qu’il va utiliser. Il assemble ensuite les pièces en meubles, objets, etc. puis finir le projet en protégeant le meuble avec du vernis, de la laque ou du ponçage. Il doit parfois aussi restaurer des meubles anciens. Il travail la plupart du temps en atelier. C’est un métier très créatif qui est employé dans de nombreux domaines, et qui nécessite une grande habileté et un sens de l’esthétique et de la géométrie."],
 	["Maçon", nil, "CAP maçon ou CAP constructeur d'ouvrages en béton armé, Bac pro technicien du bâtiment organisation et réalisation de gros œuvre, ou Bac pro interventions sur le patrimoine bâti option maçonnerie, ou BP maçon, ou BP métiers de la pierre ; BTS bâtiment", "Le maçon travaille dans le bâtiment au moment du gros œuvre. Son travail consiste à bâtir les fondations, les murs, les cloisons, et poser les sols (dalles, planchers…). Il suit un plan précis et utilise des briques, des pierres ou des parpaings pour construire, ainsi que du ciment et du mortier pour les faire tenir. Dans l’industrie, il peut aussi créer des structures, faire des coffrages et des moules. Dans un chantier, c’est lui qui garantit la qualité de la structure. Ce travail demande une grande résistance physique, mais aussi une très bonne capacité d’organisation et de gestion."],
+	["Dentellier", nil, "CAP arts de la dentelle", "Le dentellier créé des motifs tissés à partir de fils de soie, de lin ou de coton, ou encore des fils d’or et d’argent, formé de vides et de pleins avec un agencement de noeuds. Il peut travailler selon deux techniques : à l’aiguille, ou au fuseau. Il se sert d’un tracé sur papier pour créer une structure de « fils de bâtis », sur laquelle il attache ensuite les points de la dentelle, soit à l’aiguille soit au fuseau. Il travaille avec des centaines, voir des milliers de fils en fonction des réalisations, et peut parfois aider à la restauration d’objets ou de vêtements anciens. C’est un travail qui demande de la patience, de la précision et de l’habileté, mais aussi beaucoup de créativité et un sens de l’esthétique."],
+	["Chaudronnier", nil, " CAP réalisation en chaudronnerie industrielle, Bac professionnel technicien en chaudronnerie industrielle, BTS conception et réalisation en chaudronnerie industrielle", "Le chaudronnier réalise des ouvrages métalliques complexes à partir de fer, de cuivre, de laiton ou d’aluminium. Il découpe des plaques de métal, puis les formes à l’aide de maillets, de pinces ou de cisailles. Puis il assemble les pièces entre elles avec de la soudure, des agrafes ou des rivets. La chaudronnerie permet de créer de nombreux objets, allant de petites pièces comme des ustensiles de cuisine ou des objets de décoration, à de grosses pièces industrielles comme des carrosseries de train ou des mats d’éoliennes. C’est un métier qui demande un grand soin et de la méticulosité, ainsi qu’une forte résistance physique."],
 ]
+
+
+metiers_list.each do |name, media, training, explanation|
+  Metier.create( name: name, media: media, training: training, explanation: explanation)
+end
+
+puts "Metiers OK!"
 
 # Places ############################
 
@@ -62,6 +83,8 @@ places_list = [
 places_list.each do |name, address, zipcode, city, lat, long, phone, region, infos|
   Places.create( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, region: region, infos: infos )
 end
+
+puts "Places OK!"
 
 # Tools ############################
 
@@ -88,12 +111,49 @@ tools_list = [
 	["Massette", nil, "La massette est le marteau du maçon. Outil de percussion, il est composé d’un manche et d’une tête en métal."],
 	["Ciseaux de maçon", nil, "Les ciseaux de maçon permettent de tailler les différentes matières travaillées."],
 	["Bétonnière", nil, "La bétonnière est une machine permettant de malaxer le mortier.  Elle est composée d’une cuve qui contient le mortier, d’un moteur pour faire tourner la cuve et de roues pour déplacer l’ensemble."],
+	["Crochet à dentelle", nil, "Existe en différentes tailles. Il est en métal ou en plastique. Permet d’entrecroiser les fils pour tisser la dentelle."],
+	["Aiguille", nil, "L’aiguille à le même rôle que le crochet. Il n’est pas nécessaire d’utiliser les deux, cela dépend de la technique utilisée par le professionnel."],
+	["Ciseaux à dentelle", nil, "Les ciseaux, composés d’une lame en métal et d’un manche généralement en plastique permettent de couper les fils de dentelle."],
+	["Fourche", nil, "Cet outil est composé de deux branches fixes. A l’aide d’un crochet, le dentellier va réaliser une sorte de huit avec la dentelle."],
+	["Saladier", nil, "Le saladier est un récipient alimentaire permettant de mélanger des ingrédients."],
+	["Casserole", nil, "La casserole permet de faire cuire des préparations."],
+	["Fouet", nil, "Le fouet permet de mélanger efficacement les ingrédients à la main."],
+	["Spatule", nil, "La spatule permet de racler les bords d’un saladier pour récupérer toute la préparation contenue dedans."],
+	["Thermomètre", nil, "Le thermomètre permet de mesurer la température de la préparation du chocolat."],
+	["Ponceuse", nil, "La ponceuse est utilisée pour polir des matériaux tels que le bois, le métal ou le PVC. Elle peut être utilisée pour des travaux grossiers mais également très précis. Sa polyvalence aide les chaudronniers dans leur conception d’objets."],
+	["Brosse métallique", nil, "La brosse métallique permet au chaudronnier de nettoyer les pièces de métal rouillés. Les poils peuvent être faits avec une dureté plus ou moins importante. Ce critère doit être pris au sérieux car des poils trop durs peuvent abîmer le métal."],
+	["Burin", nil, "Le burin est un outil perforant. Il permet au chaudronnier de tailler ses matériaux comme le métal ou la pierre."],
+	["Clé à molette", nil, " La clé à molette permet de serrer un écrou ou une tête de vis. Elle possède une mâchoire réglable pour s’adapter à la taille de l’élément."],
 ]    
+
+tools_list.each do |name, media, description|
+  Tool.create(name: name, media: media, description: description)
+end
+
+puts "Tools OK!"
 
 # Users ############################
 
+    # t.string "first_name"
+    # t.string "last_name"
+    # t.string "email"
+    # t.string "phone"
+    # t.index ["metier_id"], name: "index_users_on_metier_id"
+
 
 # Assos ############################
+
+    # t.string "name"
+    # t.string "address"
+    # t.string "zipcode"
+    # t.string "city"
+    # t.float "lat"
+    # t.float "long"
+    # t.string "phone"
+    # t.string "email"
+    # t.integer "members"
+    # t.index ["region_id"], name: "index_assos_on_region_id"
+    # t.index ["user_id"], name: "index_assos_on_user_id"
 
 associations_list = [
 	["L'Outil en Main d'ANTONY", "1 avenue Léon Harmel", "92160", "ANTONY", nil, nil, "06 33 08 98 77", "oemantony@gmail.com", 32, "Ile-de-France"],
