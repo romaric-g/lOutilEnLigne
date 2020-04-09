@@ -19,7 +19,7 @@ $(document).on "turbolinks:load", ->
                 depSelect = depOptionSelect.value;
             hide = Array()
             for d in departementSelect.children
-                if d.dataset.reg == regSelect
+                if d.dataset.reg == regSelect || regSelect == "-1"
                     d.classList.remove("hide")
                 else
                     d.classList.add("hide")
