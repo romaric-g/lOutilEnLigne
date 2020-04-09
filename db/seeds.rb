@@ -39,9 +39,13 @@ end
 #Tools
 
 #Metiers
+    t.string "name", limit: 150
+    t.string "media", limit: 400
+    t.text "training"
+    t.text "explanation"
 
 metiers_list = [
-	[]
+	["Relieur", nil, "CAP arts de la reliure, BMA art de la reliure et de la dorure, DN des métiers d’art et du design mention livre"]
 
 ]
 
