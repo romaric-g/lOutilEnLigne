@@ -1,6 +1,7 @@
 class AteliersController < ApplicationController
   before_action :get_asso
   before_action :set_atelier, only: [:show, :edit, :update, :destroy]
+  add_breadcrumb "Ateliers", :asso_ateliers_path
 
   # GET /ateliers
   # GET /ateliers.json
@@ -11,6 +12,7 @@ class AteliersController < ApplicationController
   # GET /ateliers/1
   # GET /ateliers/1.json
   def show
+    add_breadcrumb "#{@atelier.name}", :asso_atelier_path
   end
 
   # GET /ateliers/new
@@ -76,5 +78,7 @@ class AteliersController < ApplicationController
   private
     def get_asso
       @asso = Asso.find(params[:asso_id])
+      add_breadcrumb "Associations", :assos_path
+      add_breadcrumb "#{@asso.name}", @asso
     end
 end

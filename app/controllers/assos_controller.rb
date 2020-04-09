@@ -12,6 +12,7 @@ class AssosController < ApplicationController
   # GET /assos/1
   # GET /assos/1.json
   def show
+    add_breadcrumb "#{@asso.name}", :asso_path
   end
 
   # GET /assos/new
