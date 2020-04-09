@@ -36,7 +36,7 @@
       <img src="https://www.loutilenmain.fr/ged/bibliobjets/2570.jpg" class="img-full">
     </div>
   </div>
-  <a href="#" class="btn">Liste des réalisations</a>      
+  <%= link_to 'Liste des réalisations', items, class:"btn"%>
 </div>
 
 <div class="col-md-12 mt-5">
@@ -50,36 +50,15 @@
         <h2 class="h3">Responsable</h2>
         <p class="mb-4">Jacques Laurentin</p>
         <h2 class="h3">Adresse de l'association</h2>
-        <p>Chambre des Métiers et de l'Artisanat de la Gironde</p>
-        <p>46 avenue Général de Larminat</p>
-        <p class="mb-4">33000 BORDEAUX</p> 
+        <p><%= @asso.address %></p>
+        <p class="mb-4"><%= @asso.zipcode %> <%= @asso.city %></p> 
         <h2 class="h3">Contacter l'association</h2>
-        <p>Par E-mail : loemg33@gmail.com</p>
-        <p>Par téléphone : 06 80 06 38 59</p>
+        <p>Par E-mail : <%= @asso.email %></p>
+        <p>Par téléphone : <%= @asso.phone %></p>
     </div>
   </div>
 </div>
 
-
-<p>
-  <strong>Name:</strong>
-  <%= @asso.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @asso.address %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @asso.zipcode %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @asso.city %>
-</p>
 
 <p>
   <strong>Lat:</strong>
@@ -89,16 +68,6 @@
 <p>
   <strong>Long:</strong>
   <%= @asso.long %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @asso.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @asso.email %>
 </p>
 
 <p>

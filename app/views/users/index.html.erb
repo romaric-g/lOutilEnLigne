@@ -8,61 +8,21 @@
   </div>
 
   <div class="row justify-content-md-between ">
+    <% @users.each do |user| %>
       <div class="col col-lg-4 m-5">
-        <img src="../images/francoislabrouche.jpg" class="img-benevole">
-        <h3 class="h3">Francois Labrouche</h4>
+        <img src="<%= user.media %>" class="img-benevole">
+        <h3 class="h3"><%= user.last_name %> <%= user.first_name %></h4>
         <p class="h5">L'Outil en main</p>
-        <p class="h5">Bordeaux Métropole</p>
+        <p class="h5"><%= user.asso %></p>
       </div>
-      <div class="col col-lg-4 m-5">
-        <img src="../images/francoislabrouche.jpg" class="img-benevole">
-        <h3 class="h3">Francois Labrouche</h4>
-        <p class="h5">L'Outil en main</p>
-        <p class="h5">Bordeaux Métropole</p>
-      </div>
-      <div class="col col-lg-4 m-5">
-        <img src="../images/francoislabrouche.jpg" class="img-benevole">
-        <h3 class="h3">Francois Labrouche</h4>
-        <p class="h5">L'Outil en main</p>
-        <p class="h5">Bordeaux Métropole</p>
-      </div>
-      <div class="col col-lg-4 m-5">
-        <img src="../images/francoislabrouche.jpg" class="img-benevole">
-        <h3 class="h3">Francois Labrouche</h4>
-        <p class="h5">L'Outil en main</p>
-        <p class="h5">Bordeaux Métropole</p>
-      </div>
+    <% end %>
   </div>    
 </div>
 
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.phone %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<% @users.each do |user| %>
+<td><%= link_to 'Show', user %></td>
+<td><%= link_to 'Edit', edit_user_path(user) %></td>
+<td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
 <%= link_to 'New User', new_user_path %>
+

@@ -1,49 +1,26 @@
 <h1>Ateliers</h1>
 <h2><%= @asso.name %></h2>
 
-<h1 class="h1">Bordeaux Métropole</h1>
-<h2 class="h2">Gironde</h2>
+<h1 class="h1"><%= @asso.city %></h1>
+<h2 class="h2"><%= @asso.departement %></h2>
 
 <div class="col-md-12 text-center mt-5">
   <h2 class="h2">Les ateliers</h2>
   <h3 class="h3">Découvrez ce que vous pourrez faire dans notre association !</h3>
   
   <div class="row">
-    <div class="col-md-4 p-2" style="height: 25vw;">
-      <img src="https://www.condat.fr/wp-content/uploads/2016/04/lubrifiants-poudres-fils-soudure-660x330.png" class="img-full">
-      <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-        <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080">Soudure</p>
+    <% @ateliers.each do |atelier| %>
+      <div class="col-md-4 p-2" style="height: 25vw;">
+        <img src="<%= atelier.media %>" class="img-full">
+        <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
+          <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080"><%= atelier.name %></p>
+        </div>
       </div>
-    </div>  
-    <div class="col-md-4 p-2" style="height: 25vw;">
-      <img src="https://www.habitatpresto.com/upload/devispresto//3419794__menuiserie.jpg" class="img-full">
-      <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-        <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080">Menuiserie</p>
-      </div>
-    </div>  
-    <div class="col-md-4 p-2" style="height: 25vw;">
-      <img src="https://www.modo-shopping.fr/uploads/marque/lacordonnerie_ban.jpg" class="img-full">
-      <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-        <p class="h2 h-100 text-white d-flex justify-content-center align-items-md-center" style="background-color: #343a4080">Cordonnerie</p>
-      </div>
-    </div>      
+    <% end %>      
   </div>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Slots</th>
-      <th>Min age</th>
-      <th>Max age</th>
-      <th>Media</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<!-- 
     <% @ateliers.each do |atelier| %>
       <tr>
         <td><%= atelier.name %></td>
@@ -59,9 +36,6 @@
         <td><%= link_to 'Destroy', [@asso, atelier], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Atelier', new_asso_atelier_path(@asso) %>
+ -->
