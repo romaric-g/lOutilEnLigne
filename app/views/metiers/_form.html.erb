@@ -8,6 +8,7 @@
     <%= f.input :media %>
     <%= f.input :training %>
     <%= f.input :explanation %>
+    <%= f.association :tools, :as => :check_boxes , :conditions => { :active => true } %>
   </div>
 
   <div class="form-actions">

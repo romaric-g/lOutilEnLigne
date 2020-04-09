@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_08_152810) do
+ActiveRecord::Schema.define(version: 2020_04_08_222020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(version: 2020_04_08_152810) do
     t.text "explanation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "metiers_tools", id: false, force: :cascade do |t|
+    t.bigint "tool_id", null: false
+    t.bigint "metier_id", null: false
+    t.index ["metier_id", "tool_id"], name: "index_metiers_tools_on_metier_id_and_tool_id"
+    t.index ["tool_id", "metier_id"], name: "index_metiers_tools_on_tool_id_and_metier_id"
   end
 
   create_table "places", force: :cascade do |t|

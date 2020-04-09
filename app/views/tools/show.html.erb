@@ -9,4 +9,16 @@
   </div>
 </div>
 <h3>Métier associé</h3>
+	<div class="row">
+		<% @tool.metiers.each do |metier| %>
+			<%= link_to metier, class:"row col-md-2 mt-2" do %>
+				<div>
+					<div class="container">
+						<img src="<%= metier.media %>" class="img-thumbnail" alt="">
+						<p class=""><%= metier.name %></p>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
 <p></p>

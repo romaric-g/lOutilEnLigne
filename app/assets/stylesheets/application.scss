@@ -42,6 +42,10 @@ $black: #000;
     object-fit: cover;
 }
 
+.img-full-box {
+    overflow: hidden;
+    max-height: 100%;
+}
 nav {
     font-family: Dosis, sans-serif;
     .logo {
@@ -75,8 +79,8 @@ body p {
     font-family: Dosis;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 25px;
     text-align: justify;
 }
 body .btn {
@@ -101,6 +105,14 @@ body .btn {
         height: 28px;
         padding-right: 5px;
     }
+}
+
+h1, .h1 {
+    color: $darkblue;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Sarabun', sans-serif;
+    margin-bottom: 2.5rem;   
 }
 h2, .h2 {
     color: $lightblue;

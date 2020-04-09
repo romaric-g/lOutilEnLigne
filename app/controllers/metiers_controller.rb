@@ -1,7 +1,7 @@
 class MetiersController < ApplicationController
   before_action :set_metier, only: [:show, :edit, :update, :destroy]
   add_breadcrumb "Metiers", :metiers_path
-
+  
   # GET /metiers
   # GET /metiers.json
   def index
@@ -11,6 +11,7 @@ class MetiersController < ApplicationController
   # GET /metiers/1
   # GET /metiers/1.json
   def show
+    
   end
 
   # GET /metiers/new
@@ -42,6 +43,7 @@ class MetiersController < ApplicationController
   # PATCH/PUT /metiers/1.json
   def update
     respond_to do |format|
+      Rails.logger.info metier_params[:tool_ids]
       if @metier.update(metier_params)
         format.html { redirect_to @metier, notice: 'Metier was successfully updated.' }
         format.json { render :show, status: :ok, location: @metier }
@@ -70,6 +72,6 @@ class MetiersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def metier_params
-      params.require(:metier).permit(:name, :media, :training, :explanation)
+      params.require(:metier).permit(:name, :media, :training, :explanation, :tool_ids=> [])
     end
 end

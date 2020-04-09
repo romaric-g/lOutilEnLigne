@@ -43,6 +43,7 @@ class ToolsController < ApplicationController
   # PATCH/PUT /tools/1.json
   def update
     respond_to do |format|
+      Rails.logger.info tool_params[:metier_ids]
       if @tool.update(tool_params)
         format.html { redirect_to @tool, notice: 'Tool was successfully updated.' }
         format.json { render :show, status: :ok, location: @tool }
@@ -71,6 +72,6 @@ class ToolsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tool_params
-      params.require(:tool).permit(:name, :media, :description)
+      params.require(:tool).permit(:name, :media, :description, :metier_ids => [])
     end
 end
