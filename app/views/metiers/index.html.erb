@@ -1,33 +1,29 @@
-<p id="notice"><%= notice %></p>
+<h1 class="h1 mt-5 mb-5">Liste des métiers</h1>
 
-<h1>Metiers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Media</th>
-      <th>Training</th>
-      <th>Explanation</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @metiers.each do |metier| %>
-      <tr>
-        <td><%= metier.name %></td>
-        <td><%= metier.media %></td>
-        <td><%= metier.training %></td>
-        <td><%= metier.explanation %></td>
-        <td><%= link_to 'Show', metier %></td>
-        <td><%= link_to 'Edit', edit_metier_path(metier) %></td>
-        <td><%= link_to 'Destroy', metier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row mb-3">
+  <% @metiers.each do |metier| %>
+    <%= link_to metier, class: "col-md-6 p-2 mt-4", :style=> 'height:20vw;' do %>
+      <div class="h-100">
+        <img src="<%= metier.media %>" class="img-full">
+        <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
+          <p class="h2 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4080"><%= metier.name %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
+</div>
 
-<br>
 
-<%= link_to 'New Metier', new_metier_path %>
+<!-- <% @metiers.each do |metier| %> -->
+<!--   <tr>
+    <td><%= metier.name %></td>
+    <td><%= metier.media %></td>
+    <td><%= metier.training %></td>
+    <td><%= metier.explanation %></td>
+    <td><%= link_to 'Show', metier %></td>
+    <td><%= link_to 'Edit', edit_metier_path(metier) %></td>
+    <td><%= link_to 'Destroy', metier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr> -->
+<!-- <% end %> -->
+
+<!-- <%= link_to 'New Metier', new_metier_path %> -->
