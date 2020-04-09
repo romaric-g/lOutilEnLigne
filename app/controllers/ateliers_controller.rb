@@ -69,6 +69,6 @@ class AteliersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def atelier_params
-      params.require(:atelier).permit(:name, :description, :slots, :min_age, :max_age, :media)
+      params.require(:atelier).permit(:name, :description, :slots, :min_age, :max_age, :media, :asso_id, :place_id, :metier_id)
     end
 end
