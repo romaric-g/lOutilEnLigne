@@ -6,6 +6,7 @@ class AssosController < ApplicationController
   # GET /assos.json
   def index
     @regions = Region.all
+    @departements = Departement.all
     @assos = Asso.all
   end
 
