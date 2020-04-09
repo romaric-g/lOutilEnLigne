@@ -8,15 +8,13 @@
 
 <div class="row mb-3">
   <% @items.each do |item| %>
-    <div class="col-md-6 mt-4">
-      <%= link_to item do %>        
-        <div class="rect-card">
-          <img alt="" class="img-full" src="<%= item.media %>">
-          <div class="rect">
-            <h2 class="h2 rect-title"><%= item.name %></h2>
-          </div>
+    <div class="col-md-6 p-2 mt-4" style="height: 20vw;">
+      <%= link_to item do %>
+        <img alt="" src="<%= item.media %>" class="img-full">
+        <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
+          <p class="h2 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4080"><%= item.name %></p>
         </div>
-      </div>
-    <% end %>
-  <% end %>
+      <% end %>
+    </div>  
+  <% end %> 
 </div>
