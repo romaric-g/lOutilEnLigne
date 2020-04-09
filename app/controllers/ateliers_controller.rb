@@ -1,10 +1,11 @@
 class AteliersController < ApplicationController
+  before_action :get_asso
   before_action :set_atelier, only: [:show, :edit, :update, :destroy]
 
   # GET /ateliers
   # GET /ateliers.json
   def index
-    @ateliers = Atelier.all
+    @ateliers = @asso.ateliers
   end
 
   # GET /ateliers/1
@@ -14,7 +15,7 @@ class AteliersController < ApplicationController
 
   # GET /ateliers/new
   def new
-    @atelier = Atelier.new
+    @atelier = @asso.ateliers.build
   end
 
   # GET /ateliers/1/edit
@@ -24,11 +25,11 @@ class AteliersController < ApplicationController
   # POST /ateliers
   # POST /ateliers.json
   def create
-    @atelier = Atelier.new(atelier_params)
+    @atelier = @asso.ateliers.build(atelier_params)
 
     respond_to do |format|
       if @atelier.save
-        format.html { redirect_to @atelier, notice: 'Atelier was successfully created.' }
+        format.html { redirect_to asso_ateliers_path(@asso), notice: 'Atelier was successfully created.' }
         format.json { render :show, status: :created, location: @atelier }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class AteliersController < ApplicationController
   def update
     respond_to do |format|
       if @atelier.update(atelier_params)
-        format.html { redirect_to @atelier, notice: 'Atelier was successfully updated.' }
+        format.html { redirect_to asso_ateliers_path(@asso), notice: 'Atelier was successfully updated.' }
         format.json { render :show, status: :ok, location: @atelier }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class AteliersController < ApplicationController
   def destroy
     @atelier.destroy
     respond_to do |format|
-      format.html { redirect_to ateliers_url, notice: 'Atelier was successfully destroyed.' }
+      format.html { redirect_to asso_ateliers_path(@asso), notice: 'Atelier was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +65,16 @@ class AteliersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_atelier
-      @atelier = Atelier.find(params[:id])
+      @atelier = @asso.ateliers.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def atelier_params
       params.require(:atelier).permit(:name, :description, :slots, :min_age, :max_age, :media, :asso_id, :place_id, :metier_id)
+    end
+
+  private
+    def get_asso
+      @asso = Asso.find(params[:asso_id])
     end
 end

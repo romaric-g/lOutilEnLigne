@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@atelier) do |f| %>
+<%= simple_form_for([@asso, @atelier]) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -10,7 +10,6 @@
     <%= f.input :min_age %>
     <%= f.input :max_age %>
     <%= f.input :media %>
-    <%= f.association :asso %>
     <%= f.association :place %>
     <%= f.association :metier %>
   </div>

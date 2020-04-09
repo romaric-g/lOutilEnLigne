@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Ateliers</h1>
+<h2><%= @asso.name %></h2>
 
 <table>
   <thead>
@@ -19,14 +18,16 @@
     <% @ateliers.each do |atelier| %>
       <tr>
         <td><%= atelier.name %></td>
+        <td><%= atelier.asso.name %></td>
+        <td><%= link_to 'Show Asso', [@asso] %></td>
         <td><%= atelier.description %></td>
         <td><%= atelier.slots %></td>
         <td><%= atelier.min_age %></td>
         <td><%= atelier.max_age %></td>
         <td><%= atelier.media %></td>
-        <td><%= link_to 'Show', atelier %></td>
-        <td><%= link_to 'Edit', edit_atelier_path(atelier) %></td>
-        <td><%= link_to 'Destroy', atelier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@asso, atelier] %></td>
+        <td><%= link_to 'Edit', edit_asso_atelier_path(@asso, atelier) %></td>
+        <td><%= link_to 'Destroy', [@asso, atelier], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Atelier', new_atelier_path %>
+<%= link_to 'New Atelier', new_asso_atelier_path(@asso) %>

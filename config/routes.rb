@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :assos
-  resources :ateliers
+  resources :assos do
+    resources :ateliers
+  end
   resources :items
   resources :events
   resources :places
