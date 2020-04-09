@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_08_222020) do
+ActiveRecord::Schema.define(version: 2020_04_09_082050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,9 @@ ActiveRecord::Schema.define(version: 2020_04_08_222020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "region_id"
+    t.bigint "user_id"
     t.index ["region_id"], name: "index_assos_on_region_id"
+    t.index ["user_id"], name: "index_assos_on_user_id"
   end
 
   create_table "ateliers", force: :cascade do |t|
@@ -52,6 +54,12 @@ ActiveRecord::Schema.define(version: 2020_04_08_222020) do
     t.text "media"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "asso_id"
+    t.bigint "metier_id"
+    t.bigint "place_id"
+    t.index ["asso_id"], name: "index_ateliers_on_asso_id"
+    t.index ["metier_id"], name: "index_ateliers_on_metier_id"
+    t.index ["place_id"], name: "index_ateliers_on_place_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -66,6 +74,10 @@ ActiveRecord::Schema.define(version: 2020_04_08_222020) do
     t.time "end_hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "place_id"
+    t.bigint "asso_id"
+    t.index ["asso_id"], name: "index_events_on_asso_id"
+    t.index ["place_id"], name: "index_events_on_place_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -75,6 +87,20 @@ ActiveRecord::Schema.define(version: 2020_04_08_222020) do
     t.time "build_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "items_metiers", id: false, force: :cascade do |t|
+    t.bigint "metier_id", null: false
+    t.bigint "item_id", null: false
+    t.index ["item_id", "metier_id"], name: "index_items_metiers_on_item_id_and_metier_id"
+    t.index ["metier_id", "item_id"], name: "index_items_metiers_on_metier_id_and_item_id"
+  end
+
+  create_table "items_tools", id: false, force: :cascade do |t|
+    t.bigint "tool_id", null: false
+    t.bigint "item_id", null: false
+    t.index ["item_id", "tool_id"], name: "index_items_tools_on_item_id_and_tool_id"
+    t.index ["tool_id", "item_id"], name: "index_items_tools_on_tool_id_and_item_id"
   end
 
   create_table "metiers", force: :cascade do |t|
@@ -130,7 +156,16 @@ ActiveRecord::Schema.define(version: 2020_04_08_222020) do
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "metier_id"
+    t.index ["metier_id"], name: "index_users_on_metier_id"
   end
 
   add_foreign_key "assos", "regions"
+  add_foreign_key "assos", "users"
+  add_foreign_key "ateliers", "assos"
+  add_foreign_key "ateliers", "metiers"
+  add_foreign_key "ateliers", "places"
+  add_foreign_key "events", "assos"
+  add_foreign_key "events", "places"
+  add_foreign_key "users", "metiers"
 end
