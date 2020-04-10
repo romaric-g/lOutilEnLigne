@@ -171,7 +171,6 @@ items_list = [
 	["Etagère à épices", nil, "Réalisation d’une petite étagère en bois à épices.", nil],
 	["Jeu de palets", nil, "Fabrication d'un caisson en contreplaqué de 10 mm. La traverse est découpée pour le passage du palet. Des élastiques sont fixés sur les côtés. Les petits palets sont découpés dans un tourillon en bois de hêtre. Le tout est peint.", nil],
 	["Gîte pour chauves-souris", nil, "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
-	["Gîte pour chauves-souris", nil, "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
 	["Jardinière", nil, "Cette jardinière est faire en béton coffré et est recouverte de faïence cassée.", nil],
 	["Violon et archet", nil, "Réalisation d’un violon et de son archet avec la technique de la dentelle aux fuseaux.", nil],
 	["Marque-page de Paul", nil, "Création d’un marque-page bicolore en dentelle au fuseau", nil],
