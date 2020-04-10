@@ -22,6 +22,8 @@
 
 ##############
 
+puts "begin seeds.rb"
+
 
 # Regions ##############################
 
@@ -167,12 +169,12 @@ puts "Departements OK!"
   #  t.time "build_time"
 
 items_list = [
-	["Crèche moulée", nil, "Cette crèche est une réalisation en plâtre coulée dans un moule de polymère. Elle est ensuite décorée avec de la peinture sur plâtre pour lui donner un aspect rappelant le vitrail.", nil],
-	["Etagère à épices", nil, "Réalisation d’une petite étagère en bois à épices.", nil],
-	["Jeu de palets", nil, "Fabrication d'un caisson en contreplaqué de 10 mm. La traverse est découpée pour le passage du palet. Des élastiques sont fixés sur les côtés. Les petits palets sont découpés dans un tourillon en bois de hêtre. Le tout est peint.", nil],
-	["Gîte pour chauves-souris", nil, "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
-	["Jardinière", nil, "Cette jardinière est faire en béton coffré et est recouverte de faïence cassée.", nil],
-	["Violon et archet", nil, "Réalisation d’un violon et de son archet avec la technique de la dentelle aux fuseaux.", nil],
+	["Crèche moulée", "https://www.loutilenmain.fr/ged/bibliobjets/428.png", "Cette crèche est une réalisation en plâtre coulée dans un moule de polymère. Elle est ensuite décorée avec de la peinture sur plâtre pour lui donner un aspect rappelant le vitrail.", nil],
+	["Etagère à épices", "https://www.loutilenmain.fr/ged/bibliobjets/392.png", "Réalisation d’une petite étagère en bois à épices.", nil],
+	["Jeu de palets", "https://www.loutilenmain.fr/ged/bibliobjets/378.png", "Fabrication d'un caisson en contreplaqué de 10 mm. La traverse est découpée pour le passage du palet. Des élastiques sont fixés sur les côtés. Les petits palets sont découpés dans un tourillon en bois de hêtre. Le tout est peint.", nil],
+	["Gîte pour chauves-souris", "https://www.loutilenmain.fr/ged/bibliobjets/3235.jpg", "Fabrication d’un gîte pour chauves-souris. Uniquement réalisé en bois brut afin de ne pas rendre malade les chauves-souris avec des produits toxiques comme la peinture ou du vernis à bois.", nil],
+	["Jardinière", "https://www.loutilenmain.fr/ged/bibliobjets/420.png", "Cette jardinière est faire en béton coffré et est recouverte de faïence cassée.", nil],
+	["Violon et archet", "https://www.loutilenmain.fr/ged/bibliobjets/410.png", "Réalisation d’un violon et de son archet avec la technique de la dentelle aux fuseaux.", nil],
 	["Marque-page de Paul", nil, "Création d’un marque-page bicolore en dentelle au fuseau", nil],
 	["Bracelet de Marie", nil, "Création d’un bracelet en dentelle au fuseau avec attaches métalliques", nil],
 	["Bougeoir de Breteil", nil, "Ce bougeoir est réalisé avec 3 éléments forgé et une tôle mise en forme de cône.", nil],
@@ -196,12 +198,12 @@ puts "Items OK!"
  # t.text "explanation"
 
 metiers_list = [
-	["Relieur", nil, "CAP arts de la reliure, BMA art de la reliure et de la dorure, DN des métiers d’art et du design mention livre", "Le relieur, aussi parfois doreur, a comme rôle de protéger des livres en leur fabriquant des couvertures, traditionnellement pour les manuscrits mais également pour des imprimés. Sur la plupart des livres, un relieur va assembler les pages en « cahiers » et les coudre ensembles, puis fabriquer la couverture et l’assembler au livre. Mais il peut aussi travailler dans la restauration de livres anciens. Il doit d’abord démonter et nettoyer le livre, pour s’assurer qu’il est dans le meilleur état possible, puis il refait la reliure et restaure la couverture. Il travaille généralement avec des fils de lin ou de la colle, et du cuir ou d’autres matériaux similaires pour la couverture. Il est souvent appelé par des bibliothèques ou des musées. C’est un métier qui demande de la précaution et de la patience, ainsi que de la créativité, et surtout un grand amour des livres."],
-	["Plâtrier", nil, "CAP plâtrier-plaquiste ou CAP staffeur ornemaniste, BAC pro aménagement-finition puis BTS finition-aménagement", "Le plâtrier intervient dans le bâtiment après la maçonnerie et la menuiserie. Il a plusieurs rôles : enduire les murs et les plafonds de couches de plâtre, pour rendre les surfaces régulières ; construire les cloisons avec des matériaux tout prêts (plaques ou carreaux de plâtre) ; faire l’isolation des bâtiments ; et enfin décorer en faisant des moulures, des corniches, des rosaces… Le plâtrier doit être minutieux et précis, et avoir un sens de la méthode."],
-	["Menuisier", nil, "CAP menuisier, charpentier ou constructeur bois, Bac pro technicien menuisier, charpentier ou constructeur bois, BTS systèmes constructifs bois et habitat ou développement et réalisation bois", "Le menuisier travaille le bois sous toutes ses formes : fabrication, réparation, installation… pour créer des placards, des parquets, des escaliers, des tables, n’importe quel ouvrage de boiserie. Il peut également utiliser du PVC ou de l’aluminium, et des produits de revêtement (laque, vernis…) pour finaliser son travail. Il commence par choisir le matériau adapté puis y découpe les formes qu’il va utiliser. Il assemble ensuite les pièces en meubles, objets, etc. puis finir le projet en protégeant le meuble avec du vernis, de la laque ou du ponçage. Il doit parfois aussi restaurer des meubles anciens. Il travail la plupart du temps en atelier. C’est un métier très créatif qui est employé dans de nombreux domaines, et qui nécessite une grande habileté et un sens de l’esthétique et de la géométrie."],
-	["Maçon", nil, "CAP maçon ou CAP constructeur d'ouvrages en béton armé, Bac pro technicien du bâtiment organisation et réalisation de gros œuvre, ou Bac pro interventions sur le patrimoine bâti option maçonnerie, ou BP maçon, ou BP métiers de la pierre ; BTS bâtiment", "Le maçon travaille dans le bâtiment au moment du gros œuvre. Son travail consiste à bâtir les fondations, les murs, les cloisons, et poser les sols (dalles, planchers…). Il suit un plan précis et utilise des briques, des pierres ou des parpaings pour construire, ainsi que du ciment et du mortier pour les faire tenir. Dans l’industrie, il peut aussi créer des structures, faire des coffrages et des moules. Dans un chantier, c’est lui qui garantit la qualité de la structure. Ce travail demande une grande résistance physique, mais aussi une très bonne capacité d’organisation et de gestion."],
-	["Dentellier", nil, "CAP arts de la dentelle", "Le dentellier créé des motifs tissés à partir de fils de soie, de lin ou de coton, ou encore des fils d’or et d’argent, formé de vides et de pleins avec un agencement de noeuds. Il peut travailler selon deux techniques : à l’aiguille, ou au fuseau. Il se sert d’un tracé sur papier pour créer une structure de « fils de bâtis », sur laquelle il attache ensuite les points de la dentelle, soit à l’aiguille soit au fuseau. Il travaille avec des centaines, voir des milliers de fils en fonction des réalisations, et peut parfois aider à la restauration d’objets ou de vêtements anciens. C’est un travail qui demande de la patience, de la précision et de l’habileté, mais aussi beaucoup de créativité et un sens de l’esthétique."],
-	["Chaudronnier", nil, " CAP réalisation en chaudronnerie industrielle, Bac professionnel technicien en chaudronnerie industrielle, BTS conception et réalisation en chaudronnerie industrielle", "Le chaudronnier réalise des ouvrages métalliques complexes à partir de fer, de cuivre, de laiton ou d’aluminium. Il découpe des plaques de métal, puis les formes à l’aide de maillets, de pinces ou de cisailles. Puis il assemble les pièces entre elles avec de la soudure, des agrafes ou des rivets. La chaudronnerie permet de créer de nombreux objets, allant de petites pièces comme des ustensiles de cuisine ou des objets de décoration, à de grosses pièces industrielles comme des carrosseries de train ou des mats d’éoliennes. C’est un métier qui demande un grand soin et de la méticulosité, ainsi qu’une forte résistance physique."],
+	["Relieur", "https://infos.emploipublic.fr/mediatheque_edito/1/2/3/000025321_900x500_c.jpg", "CAP arts de la reliure, BMA art de la reliure et de la dorure, DN des métiers d’art et du design mention livre", "Le relieur, aussi parfois doreur, a comme rôle de protéger des livres en leur fabriquant des couvertures, traditionnellement pour les manuscrits mais également pour des imprimés. Sur la plupart des livres, un relieur va assembler les pages en « cahiers » et les coudre ensembles, puis fabriquer la couverture et l’assembler au livre. Mais il peut aussi travailler dans la restauration de livres anciens. Il doit d’abord démonter et nettoyer le livre, pour s’assurer qu’il est dans le meilleur état possible, puis il refait la reliure et restaure la couverture. Il travaille généralement avec des fils de lin ou de la colle, et du cuir ou d’autres matériaux similaires pour la couverture. Il est souvent appelé par des bibliothèques ou des musées. C’est un métier qui demande de la précaution et de la patience, ainsi que de la créativité, et surtout un grand amour des livres."],
+	["Plâtrier", "https://www.iniaina.com/wp-content/uploads/2018/10/platrier.jpeg", "CAP plâtrier-plaquiste ou CAP staffeur ornemaniste, BAC pro aménagement-finition puis BTS finition-aménagement", "Le plâtrier intervient dans le bâtiment après la maçonnerie et la menuiserie. Il a plusieurs rôles : enduire les murs et les plafonds de couches de plâtre, pour rendre les surfaces régulières ; construire les cloisons avec des matériaux tout prêts (plaques ou carreaux de plâtre) ; faire l’isolation des bâtiments ; et enfin décorer en faisant des moulures, des corniches, des rosaces… Le plâtrier doit être minutieux et précis, et avoir un sens de la méthode."],
+	["Menuisier", "https://www.menuisier.info/wp-content/uploads/2018/02/choisir_menuisier-768x0-c-default.jpg", "CAP menuisier, charpentier ou constructeur bois, Bac pro technicien menuisier, charpentier ou constructeur bois, BTS systèmes constructifs bois et habitat ou développement et réalisation bois", "Le menuisier travaille le bois sous toutes ses formes : fabrication, réparation, installation… pour créer des placards, des parquets, des escaliers, des tables, n’importe quel ouvrage de boiserie. Il peut également utiliser du PVC ou de l’aluminium, et des produits de revêtement (laque, vernis…) pour finaliser son travail. Il commence par choisir le matériau adapté puis y découpe les formes qu’il va utiliser. Il assemble ensuite les pièces en meubles, objets, etc. puis finir le projet en protégeant le meuble avec du vernis, de la laque ou du ponçage. Il doit parfois aussi restaurer des meubles anciens. Il travail la plupart du temps en atelier. C’est un métier très créatif qui est employé dans de nombreux domaines, et qui nécessite une grande habileté et un sens de l’esthétique et de la géométrie."],
+	["Maçon", "https://www.ponceletconstruction.be/photos/561x374/maconnerie1.jpg", "CAP maçon ou CAP constructeur d'ouvrages en béton armé, Bac pro technicien du bâtiment organisation et réalisation de gros œuvre, ou Bac pro interventions sur le patrimoine bâti option maçonnerie, ou BP maçon, ou BP métiers de la pierre ; BTS bâtiment", "Le maçon travaille dans le bâtiment au moment du gros œuvre. Son travail consiste à bâtir les fondations, les murs, les cloisons, et poser les sols (dalles, planchers…). Il suit un plan précis et utilise des briques, des pierres ou des parpaings pour construire, ainsi que du ciment et du mortier pour les faire tenir. Dans l’industrie, il peut aussi créer des structures, faire des coffrages et des moules. Dans un chantier, c’est lui qui garantit la qualité de la structure. Ce travail demande une grande résistance physique, mais aussi une très bonne capacité d’organisation et de gestion."],
+	["Dentellier", "https://i.ytimg.com/vi/EUHFZrJIzTo/maxresdefault.jpg", "CAP arts de la dentelle", "Le dentellier créé des motifs tissés à partir de fils de soie, de lin ou de coton, ou encore des fils d’or et d’argent, formé de vides et de pleins avec un agencement de noeuds. Il peut travailler selon deux techniques : à l’aiguille, ou au fuseau. Il se sert d’un tracé sur papier pour créer une structure de « fils de bâtis », sur laquelle il attache ensuite les points de la dentelle, soit à l’aiguille soit au fuseau. Il travaille avec des centaines, voir des milliers de fils en fonction des réalisations, et peut parfois aider à la restauration d’objets ou de vêtements anciens. C’est un travail qui demande de la patience, de la précision et de l’habileté, mais aussi beaucoup de créativité et un sens de l’esthétique."],
+	["Chaudronnier", "https://www.atelierartsculinaires.com/wp-content/uploads/2017/06/retamage.jpg", " CAP réalisation en chaudronnerie industrielle, Bac professionnel technicien en chaudronnerie industrielle, BTS conception et réalisation en chaudronnerie industrielle", "Le chaudronnier réalise des ouvrages métalliques complexes à partir de fer, de cuivre, de laiton ou d’aluminium. Il découpe des plaques de métal, puis les formes à l’aide de maillets, de pinces ou de cisailles. Puis il assemble les pièces entre elles avec de la soudure, des agrafes ou des rivets. La chaudronnerie permet de créer de nombreux objets, allant de petites pièces comme des ustensiles de cuisine ou des objets de décoration, à de grosses pièces industrielles comme des carrosseries de train ou des mats d’éoliennes. C’est un métier qui demande un grand soin et de la méticulosité, ainsi qu’une forte résistance physique."],
 ]
 
 
@@ -219,12 +221,12 @@ puts "Metiers OK!"
     # t.text "description"
 
 tools_list = [
-	["Presse", nil, "La presse est un outil utilisé par le relieur pour compresser les pages d’un livre."],
-	["Ciseaux", nil, "Les ciseaux, composés d’une lame en métal et d’un manche généralement en plastique permettent de couper des feuilles de papier."],
-	["Massicot", nil, "Le massicot permet de couper de nombreuses feuilles de papier en une seule fois. En effet, il faut placer toutes ces feuilles sur la partie horizontale et utiliser la lame."],
-	["Piloir", nil, "Le plioir permet de réaliser des travaux de finition. Le relieur s’en sert pour former, plier et frotter le papier."],
-	["Couteau à parer", nil, "Le couteau à parer, ou doloire, permet au relieur d’amincir le cuir utilisé pour former la couverture d’un livre."],
-	["Truelle", nil, "Une truelle est une sorte de petite pelle se maniant à la main. Elle est composée d’une lame en métal et d’un manche en bois."],
+	["Presse", "https://cdn.manomano.com/presse-a-levier-1t-presse-manuelle-a-cremaillere-outil-datelier-fonte-force-de-compression-2000-kg-P-281921-10201614_1.jpg", "La presse est un outil utilisé par le relieur pour compresser les pages d’un livre."],
+	["Ciseaux", "https://madameparis.fr/wp-content/uploads/2017/09/ciseaux-professionnels-madameparis-600x600.jpg", "Les ciseaux, composés d’une lame en métal et d’un manche généralement en plastique permettent de couper des feuilles de papier."],
+	["Massicot", "https://www.cdiscount.com/pdt2/3/4/4/1/700x700/oly4030152031344/rw/olympia-g-4415-massicot-professionnel-din-a3-15-f.jpg", "Le massicot permet de couper de nombreuses feuilles de papier en une seule fois. En effet, il faut placer toutes ces feuilles sur la partie horizontale et utiliser la lame."],
+	["Piloir", "https://images-na.ssl-images-amazon.com/images/I/617z7RmrWFL._AC_SY450_.jpg", "Le plioir permet de réaliser des travaux de finition. Le relieur s’en sert pour former, plier et frotter le papier."],
+	["Couteau à parer", "https://www.artapisserie.fr/30087-large_default/couteau-a-parer-oblique-n1-vergez-blanchard.jpg", "Le couteau à parer, ou doloire, permet au relieur d’amincir le cuir utilisé pour former la couverture d’un livre."],
+	["Truelle", "https://www.pointp.fr/fstrz/r/s/www.pointp.fr/asset/67/63/AST2546763-XL.jpg", "Une truelle est une sorte de petite pelle se maniant à la main. Elle est composée d’une lame en métal et d’un manche en bois."],
 	["Taloche", nil, "Une taloche est composée d’une planche en bois ou en plastique d’environ 20 x 30 centimètres. Elle permet d’aplanir le plâtre."],
 	["Cisaille à tôle", nil, "La cisaille à tôle est l’équivalent de ciseaux pour, comme son nom l’indique, découper la tôle."],
 	["Pince à sertir", nil, "La pince à sertir est un outil permettant de sertir deux pièces, c’est-à-dire de les assembler par déformation."],
@@ -366,19 +368,18 @@ puts "Assos OK!"
     # t.index ["place_id"], name: "index_ateliers_on_place_id"
 
 ateliers_list = [
-	["Atelier chaudronnerie et peinture", "Fabrication d’un petit moulin de décoration en tôle. Les enfants découpent les formes dans les plaques de tôle puis les plient pour leur donner la forme voulue. Il faut ensuite assembler les différentes pièces par soudage pour construire le moulin. La finition est faite avec une jolie peinture pour métal bleue.", 4, 10, 12, nil, "L'Outil en Main d'ANTONY", "Aucun objet", "Chaudronnier", "Locaux de métallurgie (Antony)"],
-	["Atelier dentelle", "Création d’un violon et un archet miniature en dentelle au fuseau. On commence par dessiner le tracé qui servira de modèle à la dentelle. Les enfants apprennent à se servir d’un métier et d’un fuseau pour réaliser les trames et les vides en suivant le tracé. Ils repartiront avec une délicate création en tissu.", 6, 9, 11, nil, "L'Outil en Main du Bassin d'ARCACHON", "Violon et archet", "Dentelier", "KS Tapisserie-décoration"],
-	["Atelier maçonnerie et taillage de pierre", "Construction d’une cazelle miniature en pierre de taille. Les enfants vont apprendre à construire, à petite échelle, cette cabane de berger traditionnelle en pierre sèche. On taille d’abord les pierres en petites briques, puis elles sont assemblées et collées avec du mortier pour reproduire la forme d’une cazelle ronde. ", 10, 11, 13, nil, "L'Outil en Main de SAINT-NAZAIRE", "Aucun objet", "Maçon", "Atelier OEM de Saint-Nazaire"],
-	["Atelier maçonnerie et mosaïque", "Fabrication d’une jardinière pour la maison. Les enfants apprennent à couler du béton dans un moule pour créer la forme de la jardinière. Puis ils la décorent selon leurs envies avec des éclats de faïence colorée.", 10, 10, 12, nil, "L'Outil en Main de SAINT-NAZAIRE", "Jardinière", "Maçon", "Atelier OEM de Saint-Nazaire"],
-	["Atelier menuiserie et peinture", "Fabrication d’un jeu de palet. Les enfants découpent des planches de contreplaquée et les assemblent pour construire le caisson, puis ils fabriquent les palets à partir de tourillons en bois de hêtre. Ils peuvent décorer le jeu en utilisant de la peinture sur bois.", 5, 9, 13, nil, "L'Outil en Main de L'AIGLE", "Jeu de palets", "Menuisier", "Ebénisterie d'art Gepetto"],
-	["Atelier plâtre", "Création d’une décoration de Noël. Les enfants apprennent à fabriquer du plâtre et à le couler dans un moule pour créer une forme de bas-relief. La pièce est ensuite décorée avec de la peinture et des petits éléments en relief pour faire ressortir les images.", 12, 9, 13, nil, "L'Outil en Main de LA CHAPELLE SAINT LUC", "Crèche moulée", "Plâtrier", "Maison des associations La Chapelle-Saint-Luc"],
-	["Atelier menuiserie", "Construction d’un nichoir à oiseaux pour le jardin. Les enfants apprennent à découper les formes nécessaires dans des planches de bois de pin, puis à les assembler à l’aide de clous, de chevilles ou de colle. Enfin, ils peuvent utiliser de la peinture pour décorer leur nichoir.", 5, 10, 11, nil, "L'Outil en Main de SAINT QUENTIN", "Aucun objet", "Menuisier", "Chambre de Métiers et de l'Artisanat de l'Aisne"],
+	["Atelier chaudronnerie et peinture", "Fabrication d’un petit moulin de décoration en tôle. Les enfants découpent les formes dans les plaques de tôle puis les plient pour leur donner la forme voulue. Il faut ensuite assembler les différentes pièces par soudage pour construire le moulin. La finition est faite avec une jolie peinture pour métal bleue.", 4, 10, 12, "https://www.atelierartsculinaires.com/wp-content/uploads/2017/06/retamage.jpg", 1, "Chaudronnier", "Locaux de métallurgie (Antony)"],
+	["Atelier dentelle", "Création d’un violon et un archet miniature en dentelle au fuseau. On commence par dessiner le tracé qui servira de modèle à la dentelle. Les enfants apprennent à se servir d’un métier et d’un fuseau pour réaliser les trames et les vides en suivant le tracé. Ils repartiront avec une délicate création en tissu.", 6, 9, 11, "https://i.ytimg.com/vi/EUHFZrJIzTo/maxresdefault.jpg", 7, "Dentelier", "KS Tapisserie-décoration"],
+	["Atelier maçonnerie et taillage de pierre", "Construction d’une cazelle miniature en pierre de taille. Les enfants vont apprendre à construire, à petite échelle, cette cabane de berger traditionnelle en pierre sèche. On taille d’abord les pierres en petites briques, puis elles sont assemblées et collées avec du mortier pour reproduire la forme d’une cazelle ronde. ", 10, 11, 13, "https://cdn.futura-sciences.com/buildsv6/images/wide1920/a/c/d/acd4a4abe1_128096_mac-onnerie-fotolia-01.jpg", 6, "Maçon", "Atelier OEM de Saint-Nazaire"],
+	["Atelier maçonnerie et mosaïque", "Fabrication d’une jardinière pour la maison. Les enfants apprennent à couler du béton dans un moule pour créer la forme de la jardinière. Puis ils la décorent selon leurs envies avec des éclats de faïence colorée.", 10, 10, 12, "https://cdn.futura-sciences.com/buildsv6/images/wide1920/a/c/d/acd4a4abe1_128096_mac-onnerie-fotolia-01.jpg", 6, "Maçon", "Atelier OEM de Saint-Nazaire"],
+	["Atelier menuiserie et peinture", "Fabrication d’un jeu de palet. Les enfants découpent des planches de contreplaquée et les assemblent pour construire le caisson, puis ils fabriquent les palets à partir de tourillons en bois de hêtre. Ils peuvent décorer le jeu en utilisant de la peinture sur bois.", 5, 9, 13, "https://www.a2b-menuiserie.fr/wp-content/uploads/2019/08/innovation-menuiserie-1000x675.jpg", 4, "Menuisier", "Ebénisterie d'art Gepetto"],
+	["Atelier plâtre", "Création d’une décoration de Noël. Les enfants apprennent à fabriquer du plâtre et à le couler dans un moule pour créer une forme de bas-relief. La pièce est ensuite décorée avec de la peinture et des petits éléments en relief pour faire ressortir les images.", 12, 9, 13, "https://www.prodemmia.fr/sites/default/files/styles/xxl/public/catalogue/produits/prodemmia_platre_polyester_extra_blanc.jpg", 2,"Plâtrier", "Maison des associations La Chapelle-Saint-Luc"],
+	["Atelier menuiserie", "Construction d’un nichoir à oiseaux pour le jardin. Les enfants apprennent à découper les formes nécessaires dans des planches de bois de pin, puis à les assembler à l’aide de clous, de chevilles ou de colle. Enfin, ils peuvent utiliser de la peinture pour décorer leur nichoir.", 5, 10, 11, "https://www.a2b-menuiserie.fr/wp-content/uploads/2019/08/innovation-menuiserie-1000x675.jpg", 3,"Menuisier", "Chambre de Métiers et de l'Artisanat de l'Aisne"],
 ] 
 
-ateliers_list.each do |name, description, slots, min_age, max_age, media, asso, item, metier, place|
+ateliers_list.each do |name, description, slots, min_age, max_age, media, asso, metier, place|
   cours = Atelier.new(name: name, description: description, slots: slots, min_age: min_age, max_age: max_age, media: media)
-  cours.asso = Asso.find_by(name: asso)
-  cours.item_id = Item.find_by(name: item)
+  cours.asso = Asso.find(asso)
   cours.metier = Metier.find_by(name: metier)
   cours.place = Place.find_by(name: place)
   cours.save
@@ -386,4 +387,39 @@ end
 
 puts "Ateliers OK!"   
 
+##################### Jointures ##########################
 
+# # GameTag.create(game: Game.first, tag: Tag.find_by_name("Action")) modèle
+
+#  ### items metiers
+
+#  #  create_table "items_metiers", id: false, force: :cascade do |t|
+#  #    t.index ["item_id", "metier_id"], name: "index_items_metiers_on_item_id_and_metier_id"
+#  #    t.index ["metier_id", "item_id"], name: "index_items_metiers_on_metier_id_and_item_id"
+
+# ItemMetier.create(item: Item.first, metier: Metier.find_by_name("Plâtrier"))
+
+# puts "jointure ItemMetier OK!"
+
+
+#  #  create_table "items_tools", id: false, force: :cascade do |t|
+#  #    t.index ["item_id", "tool_id"], name: "index_items_tools_on_item_id_and_tool_id"
+#  #    t.index ["tool_id", "item_id"], name: "index_items_tools_on_tool_id_and_item_id"
+
+# ItemTool.create(item: Item.first, tool: Tool.find_by_name("Truelle"))
+# ItemTool.create(item: Item.first, tool: Tool.find_by_name("Taloche"))
+# ItemTool.create(item: Item.first, tool: Tool.find_by_name("Couteau de plaquiste"))
+
+# puts "jointure ItemTool OK!"
+
+#  # create_table "metiers_tools", id: false, force: :cascade do |t|
+#  #    t.index ["metier_id", "tool_id"], name: "index_metiers_tools_on_metier_id_and_tool_id"
+#  #    t.index ["tool_id", "metier_id"], name: "index_metiers_tools_on_tool_id_and_metier_id"    
+
+# MetierTool.create(metier: Metier.first, tool: Tool.find_by_name("Truelle"))
+# MetierTool.create(metier: Metier.first, tool: Tool.find_by_name("Taloche"))
+# MetierTool.create(metier: Metier.first, tool: Tool.find_by_name("Couteau de plaquiste"))
+
+# puts "jointure MetierTool OK!"
+
+puts "end seeds.rb"

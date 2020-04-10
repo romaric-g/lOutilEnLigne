@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_192531) do
+ActiveRecord::Schema.define(version: 2020_04_10_102933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,9 +57,7 @@ ActiveRecord::Schema.define(version: 2020_04_09_192531) do
     t.bigint "asso_id"
     t.bigint "metier_id"
     t.bigint "place_id"
-    t.bigint "item_id"
     t.index ["asso_id"], name: "index_ateliers_on_asso_id"
-    t.index ["item_id"], name: "index_ateliers_on_item_id"
     t.index ["metier_id"], name: "index_ateliers_on_metier_id"
     t.index ["place_id"], name: "index_ateliers_on_place_id"
   end
@@ -175,7 +173,6 @@ ActiveRecord::Schema.define(version: 2020_04_09_192531) do
   add_foreign_key "assos", "departements"
   add_foreign_key "assos", "users"
   add_foreign_key "ateliers", "assos"
-  add_foreign_key "ateliers", "items"
   add_foreign_key "ateliers", "metiers"
   add_foreign_key "ateliers", "places"
   add_foreign_key "departements", "regions"
