@@ -154,7 +154,7 @@ puts "Regions OK!"
 	departement_list.each do |name, numero, num|
 		departemt = Departement.new(name: name, numero: numero)
 		departemt.region = Region.find_by(num: num)
-		departemt.save!
+		departemt.save
 	end
 
 puts "Departements OK!"	     
@@ -285,7 +285,7 @@ places_list = [
 places_list.each do |name, address, zipcode, city, lat, long, phone, infos, num|
   locaux = Place.new( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, infos: infos)
   locaux.region_id = Region.find_by(num: num)
-  locaux.save!
+  locaux.save
 end
 
 puts "Places OK!"
@@ -346,7 +346,7 @@ assos_list.each do |name, address, zipcode, city, lat, long, phone, email, membe
   a = Asso.new( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, email: email, members: members)
   a.departement = Departement.find_by(name: departement)
   a.user_id = User.find_by(first_name: user)
-  a.save!
+  a.save
 end
 
 puts "Assos OK!"
