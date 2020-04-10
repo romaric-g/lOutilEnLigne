@@ -22,6 +22,7 @@
 
 ##############
 
+
 # Regions ##############################
 
 	  Region.create(num: "01", uppername:"GUADELOUPE", displayname: "Guadeloupe")
@@ -178,7 +179,7 @@ items_list = [
 	["Bougeoir de Breteil", nil, "Ce bougeoir est réalisé avec 3 éléments forgé et une tôle mise en forme de cône.", nil],
 	["L’avion de Jean-Yves", nil, "Cet avion est réalisé en tôle formée et soudée. Les ailes et l’hélice sont en aluminium alors que le moteur, les roues, les écarteurs d’ailes et le pilote sont en bois.", nil],
 	["Masques d’Halloween", nil, "Ces avion sont fabriqués en tôle pliée et découpée. Elle a été rivetée sur un couvercle de pot de confiture. Derrière chaque masque, une bougie a été placée.", nil],
-	[" ", nil, nil, nil],
+	["Aucun objet", nil, nil, nil],
 
 ]
 
@@ -281,9 +282,9 @@ places_list = [
 	["KS Tapisserie-décoration","14bis Allée de Cazaux", "33470", "Gujan-Mestras", nil, nil, "06 86 71 77 95", "Accueille les ateliers de 14h à 18h", 75],
 ]
 
-places_list.each do |name, address, zipcode, city, lat, long, phone, infos, region|
+places_list.each do |name, address, zipcode, city, lat, long, phone, infos, num|
   locaux = Place.new( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, infos: infos)
-  locaux.region = Region.find_by(num: region)
+  locaux.region_id = Region.find_by(num: num)
   locaux.save!
 end
 
@@ -309,11 +310,12 @@ users_list = [
 
 users_list.each do |first_name, last_name, email, phone, metier|
 		benevole = User.new(first_name: first_name, last_name: last_name, email: email, phone: phone)
-		benevole.metier = Metier.find_by(name: metier)
-		benevole.save!
+		benevole.metier_id = Metier.find_by(name: metier)
+		benevole.save
 	end
 
 puts "Users OK!"
+
 
 # Assos ############################
 
@@ -330,20 +332,21 @@ puts "Users OK!"
     # t.index ["user_id"], name: "index_assos_on_user_id"
 
 assos_list = [
-	["L'Outil en Main d'ANTONY", "1 avenue Léon Harmel", "92160", "ANTONY", nil, nil, "06 33 08 98 77", "oemantony@gmail.com", 32, 11],
-	["L'Outil en Main de LA CHAPELLE SAINT LUC", "58 avenue Aristide Briand", "10600", "La Chapelle St Luc", nil, nil, "06 59 06 04 74", "patoche3@bbox.fr", 22, 44],
-	["L'Outil en Main de SAINT QUENTIN", "46 rue des Glatiniers", "02100", "Saint Quentin", nil, nil, "03 23 62 31 18", nil, 17, 32],
-	["L'Outil en Main de L'AIGLE", "Place Fulbert de Beina", "61300", "L'AIGLE", nil, nil, "06 42 90 83 14", "jc.tripied@wanadoo.fr", 21, 28],
-	["L'Outil en Main d'ORLEANS", "79 rue du Petit Pont", "45000", "ORLEANS", nil, nil, "06 60 62 07 42", "pat-hume@orange.fr", 12, 24],
-	["L'Outil en Main de SAINT-NAZAIRE", "11 place de la rampe", "44600", "SAINT-NAZAIRE", nil, nil, "07 82 97 96 58", "oem.nazairien@gmail.com", 40, 52],
-	["L'Outil en Main du Bassin d'ARCACHON", "9 ter rue du Stade", "33470", "LE TECH", nil, nil, "07 85 56 45 56", "loutilenmaindubassindarcachon@gmail.com", 6, 75],
+	["L'Outil en Main d'ANTONY", "1 avenue Léon Harmel", "92160", "ANTONY", nil, nil, "06 33 08 98 77", "oemantony@gmail.com", 32, "92", "Michel"],
+	["L'Outil en Main de LA CHAPELLE SAINT LUC", "58 avenue Aristide Briand", "10600", "La Chapelle St Luc", nil, nil, "06 59 06 04 74", "patoche3@bbox.fr", 22, "10", "Patrice"],
+	["L'Outil en Main de SAINT QUENTIN", "46 rue des Glatiniers", "02100", "Saint Quentin", nil, nil, "03 23 62 31 18", nil, 17, "02", "Alain"],
+	["L'Outil en Main de L'AIGLE", "Place Fulbert de Beina", "61300", "L'AIGLE", nil, nil, "06 42 90 83 14", "jc.tripied@wanadoo.fr", 21, "61", "Jean-Claude"],
+	["L'Outil en Main d'ORLEANS", "79 rue du Petit Pont", "45000", "ORLEANS", nil, nil, "06 60 62 07 42", "pat-hume@orange.fr", 12, 24, "Patrick"],
+	["L'Outil en Main de SAINT-NAZAIRE", "11 place de la rampe", "44600", "SAINT-NAZAIRE", nil, nil, "07 82 97 96 58", "oem.nazairien@gmail.com", 40, "44", "Fabienne"],
+	["L'Outil en Main du Bassin d'ARCACHON", "9 ter rue du Stade", "33470", "LE TECH", nil, nil, "07 85 56 45 56", "loutilenmaindubassindarcachon@gmail.com", 6, "33", "Jean-Marc"],
 
 ]
 
-assos_list.each do |name, address, zipcode, city, lat, long, phone, email, members, region|
-  associat = Asso.new( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, email: email, members: members)
-  associat.region = Region.find_by(num: region)
-  associat.save!
+assos_list.each do |name, address, zipcode, city, lat, long, phone, email, members, departement, user|
+  a = Asso.new( name: name, address: address, zipcode: zipcode, city: city, lat: lat, long: long, phone: phone, email: email, members: members)
+  a.departement = Departement.find_by(name: departement)
+  a.user_id = User.find_by(first_name: user)
+  a.save!
 end
 
 puts "Assos OK!"
@@ -364,22 +367,22 @@ puts "Assos OK!"
     # t.index ["place_id"], name: "index_ateliers_on_place_id"
 
 ateliers_list = [
-	["Atelier chaudronnerie et peinture", "Fabrication d’un petit moulin de décoration en tôle. Les enfants découpent les formes dans les plaques de tôle puis les plient pour leur donner la forme voulue. Il faut ensuite assembler les différentes pièces par soudage pour construire le moulin. La finition est faite avec une jolie peinture pour métal bleue.", 4, 10, 12, nil, "L'Outil en Main d'ANTONY", " ", "Chaudronnier", "Locaux de métallurgie (Antony)"],
+	["Atelier chaudronnerie et peinture", "Fabrication d’un petit moulin de décoration en tôle. Les enfants découpent les formes dans les plaques de tôle puis les plient pour leur donner la forme voulue. Il faut ensuite assembler les différentes pièces par soudage pour construire le moulin. La finition est faite avec une jolie peinture pour métal bleue.", 4, 10, 12, nil, "L'Outil en Main d'ANTONY", "Aucun objet", "Chaudronnier", "Locaux de métallurgie (Antony)"],
 	["Atelier dentelle", "Création d’un violon et un archet miniature en dentelle au fuseau. On commence par dessiner le tracé qui servira de modèle à la dentelle. Les enfants apprennent à se servir d’un métier et d’un fuseau pour réaliser les trames et les vides en suivant le tracé. Ils repartiront avec une délicate création en tissu.", 6, 9, 11, nil, "L'Outil en Main du Bassin d'ARCACHON", "Violon et archet", "Dentelier", "KS Tapisserie-décoration"],
-	["Atelier maçonnerie et taillage de pierre", "Construction d’une cazelle miniature en pierre de taille. Les enfants vont apprendre à construire, à petite échelle, cette cabane de berger traditionnelle en pierre sèche. On taille d’abord les pierres en petites briques, puis elles sont assemblées et collées avec du mortier pour reproduire la forme d’une cazelle ronde. ", 10, 11, 13, nil, "L'Outil en Main de SAINT-NAZAIRE", " ", "Maçon", "Atelier OEM de Saint-Nazaire"],
+	["Atelier maçonnerie et taillage de pierre", "Construction d’une cazelle miniature en pierre de taille. Les enfants vont apprendre à construire, à petite échelle, cette cabane de berger traditionnelle en pierre sèche. On taille d’abord les pierres en petites briques, puis elles sont assemblées et collées avec du mortier pour reproduire la forme d’une cazelle ronde. ", 10, 11, 13, nil, "L'Outil en Main de SAINT-NAZAIRE", "Aucun objet", "Maçon", "Atelier OEM de Saint-Nazaire"],
 	["Atelier maçonnerie et mosaïque", "Fabrication d’une jardinière pour la maison. Les enfants apprennent à couler du béton dans un moule pour créer la forme de la jardinière. Puis ils la décorent selon leurs envies avec des éclats de faïence colorée.", 10, 10, 12, nil, "L'Outil en Main de SAINT-NAZAIRE", "Jardinière", "Maçon", "Atelier OEM de Saint-Nazaire"],
 	["Atelier menuiserie et peinture", "Fabrication d’un jeu de palet. Les enfants découpent des planches de contreplaquée et les assemblent pour construire le caisson, puis ils fabriquent les palets à partir de tourillons en bois de hêtre. Ils peuvent décorer le jeu en utilisant de la peinture sur bois.", 5, 9, 13, nil, "L'Outil en Main de L'AIGLE", "Jeu de palets", "Menuisier", "Ebénisterie d'art Gepetto"],
 	["Atelier plâtre", "Création d’une décoration de Noël. Les enfants apprennent à fabriquer du plâtre et à le couler dans un moule pour créer une forme de bas-relief. La pièce est ensuite décorée avec de la peinture et des petits éléments en relief pour faire ressortir les images.", 12, 9, 13, nil, "L'Outil en Main de LA CHAPELLE SAINT LUC", "Crèche moulée", "Plâtrier", "Maison des associations La Chapelle-Saint-Luc"],
-	["Atelier menuiserie", "Construction d’un nichoir à oiseaux pour le jardin. Les enfants apprennent à découper les formes nécessaires dans des planches de bois de pin, puis à les assembler à l’aide de clous, de chevilles ou de colle. Enfin, ils peuvent utiliser de la peinture pour décorer leur nichoir.", 5, 10, 11, nil, "L'Outil en Main de SAINT QUENTIN", " ", "Menuisier", "Chambre de Métiers et de l'Artisanat de l'Aisne"],
+	["Atelier menuiserie", "Construction d’un nichoir à oiseaux pour le jardin. Les enfants apprennent à découper les formes nécessaires dans des planches de bois de pin, puis à les assembler à l’aide de clous, de chevilles ou de colle. Enfin, ils peuvent utiliser de la peinture pour décorer leur nichoir.", 5, 10, 11, nil, "L'Outil en Main de SAINT QUENTIN", "Aucun objet", "Menuisier", "Chambre de Métiers et de l'Artisanat de l'Aisne"],
 ] 
 
 ateliers_list.each do |name, description, slots, min_age, max_age, media, asso, item, metier, place|
-  cours = Atelier.new( name: name, description: description, slots: slots, min_age: min_age, max_age: max_age, media: media)
+  cours = Atelier.new(name: name, description: description, slots: slots, min_age: min_age, max_age: max_age, media: media)
   cours.asso = Asso.find_by(name: asso)
-  cours.item = Item.find_by(name: item)
-  cours.asso = Asso.find_by(name: metier)
-  cours.asso = Asso.find_by(name: place)
-  cours.save!
+  cours.item_id = Item.find_by(name: item)
+  cours.metier = Metier.find_by(name: metier)
+  cours.place = Place.find_by(name: place)
+  cours.save
 end
 
 puts "Ateliers OK!"   
