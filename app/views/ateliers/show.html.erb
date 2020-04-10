@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1 class="h1"><%= @atelier.name %></h1>
 
-<div class="row">
+<div class="row mb-5">
   <div class="col-md-5">
     <img src="<%= @atelier.media %>" class="img-full">
   </div>
@@ -16,20 +14,22 @@
   </div>
 </div>
 
-<h2 class="h2 mt-5">Les outils utilisés</h2>
-<div class="container">
-  <% @atelier.metier.tools.each do |tool| %>
-    <div class="col-md-2 d-inline-flex flex-wrap">
-      <div class="">
-        <img src="<%= tool.media %>" class="img-full">
+<% if @atelier.metier.tools.length() != 0 %>
+  <h2 class="h2 mt-5">Les outils utilisés</h2>
+  <div class="container">
+    <% @atelier.metier.tools.each do |tool| %>
+      <div class="col-md-2 d-inline-flex flex-wrap">
+        <div class="">
+          <img src="<%= tool.media %>" class="img-full">
+        </div>
+        <div class="w-100">
+          <p class="text-center"><%= tool.name %></p>
+        </div>        
       </div>
-      <div class="w-100">
-        <p class="text-center"><%= tool.name %></p>
-      </div>        
-    </div>
-  <% end %>
-</div>
-
+    <% end %>
+  </div>
+<% end %>
+<!--
 <div class="text-center mt-5 col-md-12">
   <h2 class="h2">Découvrez nos réalisations !</h2>
   <h3 class="h3">Tout est fait avec passion !</h3>
@@ -46,7 +46,7 @@
   </div>
   <a href="#" class="btn">Liste des réalisations</a>      
 </div>
-
+-->
 <!-- 
 <p>
   <strong>Name:</strong>

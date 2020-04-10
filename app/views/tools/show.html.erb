@@ -4,11 +4,12 @@
     <img class="img-full" src="<%= @tool.media %>">
   </div>
   <div class="col-sm">
-    <h3>Description</h3>
+    <h2>Description</h2>
     <p><%= @tool.description %></p>
   </div>
 </div>
-<h3>Métier associé</h3>
+<% if @tool.metiers.length() != 0 %>
+	<h2>Métier associé</h2>
 	<div class="row">
 		<% @tool.metiers.each do |metier| %>
 			<%= link_to metier, class:"row col-md-2 mt-2" do %>
@@ -21,4 +22,4 @@
 			<% end %>
 		<% end %>
 	</div>
-<p></p>
+<% end %>
