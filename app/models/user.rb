@@ -1,4 +1,3 @@
 class User < ApplicationRecord
-	belongs_to :asso
-	belongs_to :user
+	belongs_to :metier
 end
