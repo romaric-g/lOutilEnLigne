@@ -1,16 +1,12 @@
-<h2 class="h2 mb-5">Les réalisations</h2>
+<h2 class="h2">Les réalisations</h2>
 
 <div class="row mb-3">
   <% @items.each do |item| %>
-    <div class="col-md-6 p-2 mt-4" style="height: 20vw;">
-      <%= link_to item do %>
+    <div class="col-md-4 p-2" style="height: 20vw;">
         <img alt="" src="<%= item.media %>" class="img-full">
         <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-          <p class="h2 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4080"><%= item.name %></p>
+          <p class="h2 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4020"><%= item.name %></p>
         </div>
-      <% end %>
     </div>  
   <% end %> 
 </div>
-
-<%= link_to 'New Item', new_item_path %>

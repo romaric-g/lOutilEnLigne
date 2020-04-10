@@ -1,29 +1,16 @@
-<h2 class="h2 mb-5">Liste des métiers</h2>
+<h1 class="h2">Liste des métiers</h1>
 
 <div class="row mb-3">
   <% @metiers.each do |metier| %>
-    <%= link_to metier, class: "col-md-6 p-2 mt-4", :style=> 'height:20vw;' do %>
-      <div class="h-100">
-        <img src="<%= metier.media %>" class="img-full">
-        <div class="position-absolute w-100 h-100 p-2" style="top: 0; left: 0;">
-          <p class="h2 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4080"><%= metier.name %></p>
+    <div class="col-md-4 p-2 mt-4">
+      <%= link_to metier do %>
+        <div class="position-relative">
+            <img src="<%= metier.media %>" class="img-full">
+            <div class="position-absolute w-100 h-100" style="top: 0; left: 0;">
+              <p class="h2 w-100 h-100 text-white d-flex justify-content-center align-items-center" style="background-color: #343a4020"><%= metier.name %></p>
+            </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>  
+    </div>
   <% end %>
 </div>
-
-
-<!-- <% @metiers.each do |metier| %> -->
-<!--   <tr>
-    <td><%= metier.name %></td>
-    <td><%= metier.media %></td>
-    <td><%= metier.training %></td>
-    <td><%= metier.explanation %></td>
-    <td><%= link_to 'Show', metier %></td>
-    <td><%= link_to 'Edit', edit_metier_path(metier) %></td>
-    <td><%= link_to 'Destroy', metier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr> -->
-<!-- <% end %> -->
-
-<%= link_to 'New Metier', new_metier_path %>

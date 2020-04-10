@@ -1,7 +1,7 @@
+ <h1 class="h2">Nos bénévoles</h1>
 <div class="col-md-10 offset-md-1">
-  <div class="row col-md-12 m-3">
-    <h2 class="h2 col-md-12">Nos bénévoles</h2>
-    <hp class="col-md-12">Rencontrez-les lors de nos ateliers !</p>
+  <div class="row col-md-12">
+    <p class="col-md-12">Rencontrez-les lors de nos ateliers !</p>
   </div>
 
   <div class="row justify-content-md-between ">
@@ -15,11 +15,3 @@
     <% end %>
   </div>    
 </div>
-
-<% @users.each do |user| %>
-<td><%= link_to 'Show', user %></td>
-<td><%= link_to 'Edit', edit_user_path(user) %></td>
-<td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>
-<%= link_to 'New User', new_user_path %>
-

@@ -11,7 +11,7 @@ class MetiersController < ApplicationController
   # GET /metiers/1
   # GET /metiers/1.json
   def show
-    
+    add_breadcrumb "#{@metier.name}", :metier_path
   end
 
   # GET /metiers/new
